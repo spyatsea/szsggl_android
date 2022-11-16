@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+   <include
+        android:id="@id/title_bar_layout"
+        layout="@layout/title_bar_me_main" />
+
+    <ScrollView
+        android:id="@id/main_exercise_panel"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/background"
+        android:fadingEdge="none"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background"
+            android:gravity="center_horizontal|top"
+            android:orientation="vertical"
+            android:padding="7dp" >
+
+
+            <Button
+                android:id="@id/confirmBtn"
+                android:layout_width="100dp"
+                android:layout_height="38.0dip"
+                android:layout_marginLeft="14dip"
+                android:layout_marginRight="14dip"
+                android:layout_marginTop="20dip"
+                android:background="@drawable/custom_btn_card_blue"
+                android:gravity="center"
+                android:text="@string/confirm"
+                android:textColor="@color/solid_plain"
+                android:textSize="18.0sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

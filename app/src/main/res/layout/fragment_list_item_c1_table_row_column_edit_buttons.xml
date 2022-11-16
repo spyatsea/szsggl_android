@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tableColumnLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:addStatesFromChildren="true"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:padding="5dip" >
+
+    <ImageButton
+        android:id="@+id/tableButtonEdit"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/transparent_pic"
+        android:contentDescription="@null"
+        android:scaleType="centerInside"
+        android:src="@drawable/table_icon_edit_selector" />
+
+    <ImageButton
+        android:id="@+id/tableButtonDelete"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/transparent_pic"
+        android:contentDescription="@null"
+        android:scaleType="centerInside"
+        android:src="@drawable/table_icon_delete_selector" />
+
+</LinearLayout>

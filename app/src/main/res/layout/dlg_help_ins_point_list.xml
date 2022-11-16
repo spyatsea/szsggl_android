@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/solid_plain"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:orientation="vertical"
+        android:paddingLeft="7dp"
+        android:paddingTop="7dp"
+        android:paddingRight="7dp"
+        android:paddingBottom="5dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="1dp"
+            android:lineSpacingExtra="1dip"
+            android:paddingBottom="1dp"
+            android:layout_marginTop="3dip"
+            android:text="1、如果巡视点需要定位，则需要先定位后才能开启检查。首次检查时，可能需要先采集经纬度坐标或RFID编号。"
+            android:textColor="@color/text_black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="1dp"
+            android:lineSpacingExtra="1dip"
+            android:layout_marginTop="3dip"
+            android:paddingBottom="1dp"
+            android:text="2、当出现“采集”按钮时，表示该巡视点可以手工多次采集经纬度坐标或RFID编号。"
+            android:textColor="@color/text_black"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dip"
+            android:gravity="top|left"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="1dp"
+                android:lineSpacingExtra="1dip"
+                android:paddingBottom="1dp"
+                android:text="3、"
+                android:textColor="@color/text_black"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:contentDescription="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/table_icon_medium_priority_normal" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:lineSpacingExtra="1dip"
+                android:paddingTop="1dp"
+                android:paddingBottom="1dp"
+                android:text=" 表示有未完成的现场检查记录。"
+                android:textColor="@color/text_black"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@id/title_bar_layout"
+        layout="@layout/title_bar_me_main" />
+
+    <FrameLayout
+        android:id="@id/main_exercise_panel"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/background"
+        android:fadingEdge="none"
+        android:orientation="vertical" >
+
+
+   
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,65 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/serveraddr"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="3dip"
+        android:layout_marginLeft="3dip"
+        android:layout_marginRight="3dip"
+        android:inputType="textUri"
+        android:background="@drawable/border_grey"
+        android:gravity="left"
+        android:padding="3dp"
+        android:text=""
+        android:textColor="@color/solid_black"
+        android:textColorHint="@color/text_hint"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/urlDefaultBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:gravity="center"
+            android:text="@string/btn_url_upload_default_out" />
+
+        <Button
+            android:id="@+id/urlDefaultOtherBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:gravity="center"
+            android:text="@string/btn_url_upload_default_in"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/urlTestNetBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:gravity="center"
+            android:text="@string/btn_url_upload_testnet"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/confirmUrlBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:gravity="center"
+            android:text="@string/confirm" />
+    </LinearLayout>
+
+</LinearLayout>

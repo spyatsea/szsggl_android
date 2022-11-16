@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/navigation_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="54.0dip"
+    android:background="@drawable/navigation_bar_bottom"
+    android:orientation="horizontal" >
+
+    <RadioGroup
+        android:id="@id/navBtnGroup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@id/nav_btn_message"
+            style="@style/NavigateView.Btn"
+            android:button="@null"
+            android:checked="true"
+            android:drawableTop="@drawable/knowledges_icon_selector"
+            android:text="@string/title_message"
+            android:textColor="@drawable/navigation_channel_text_color_selector" />
+
+        <Button
+            android:id="@id/nav_btn_news"
+            style="@style/NavigateView.Btn"
+            android:button="@null"
+            android:drawableTop="@drawable/news_icon"
+            android:text="@string/title_news"
+            android:textColor="@drawable/navigation_channel_text_color_selector" />
+
+        <Button
+            android:id="@id/nav_btn_config"
+            style="@style/NavigateView.Btn"
+            android:button="@null"
+            android:drawableTop="@drawable/other_icon"
+            android:text="@string/config"
+            android:textColor="@drawable/navigation_channel_text_color_selector" />
+    </RadioGroup>
+
+</LinearLayout>

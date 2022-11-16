@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.cox.android.szsggl",
+  "variantName": "release",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 115,
+      "versionName": "1.1.5",
+      "outputFile": "szsggl_20221116032614.apk"
+    }
+  ],
+  "elementType": "File"
+}

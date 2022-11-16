@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <ImageView
+            android:id="@+id/play_voice_iv"
+            android:layout_width="100dp"
+            android:layout_height="104dp"
+            android:scaleType="centerInside"
+            android:background="@drawable/voice_playing"
+            android:contentDescription="@null" />
+
+        <LinearLayout
+            android:id="@+id/play_voice_start_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageButton
+                android:id="@+id/play_voice_start"
+                android:layout_width="56.0dip"
+                android:layout_height="56.0dip"
+                android:background="@drawable/microphone_start_selector"
+                android:contentDescription="@string/voice_play"
+                android:scaleType="centerInside" />
+
+            <TextView
+                android:id="@+id/play_voice_start_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/voice_play_blank"
+                android:textColor="@color/text_green"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/play_voice_pause_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <ImageButton
+                android:id="@+id/play_voice_pause"
+                android:layout_width="56.0dip"
+                android:layout_height="56.0dip"
+                android:background="@drawable/microphone_pause_selector"
+                android:contentDescription="@string/voice_pause"
+                android:scaleType="centerInside" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/voice_pause_blank"
+                android:textColor="@color/text_blue_light"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/play_voice_stop_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+            <ImageButton
+                android:id="@+id/play_voice_stop"
+                android:layout_width="56.0dip"
+                android:layout_height="56.0dip"
+                android:background="@drawable/microphone_stop_selector"
+                android:contentDescription="@string/voice_stop"
+                android:scaleType="centerInside" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/voice_stop"
+                android:textColor="@color/solid_red"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

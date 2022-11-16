@@ -1,0 +1,114 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/solid_plain"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:background="@null"
+            android:contentDescription="@null"
+            android:scaleType="centerInside"
+            android:src="@null" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10.0dp" >
+
+                <ImageView
+                    android:id="@+id/user_icon_img"
+                    android:layout_width="54.0dip"
+                    android:layout_height="54.0dip"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@null"
+                    android:contentDescription="@null"
+                    android:src="@drawable/default_head" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/user_no_login_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:shadowColor="@color/trans_grey"
+                    android:shadowDx="1"
+                    android:shadowDy="2"
+                    android:shadowRadius="1"
+                    android:text="@string/notlogin"
+                    android:textColor="@color/solid_black"
+                    android:textSize="22sp"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/user_info_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="3dp"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/user_name_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingBottom="2.0dp"
+                        android:paddingTop="2.0dp"
+                        android:shadowColor="@color/trans_grey"
+                        android:shadowDx="1"
+                        android:shadowDy="2"
+                        android:shadowRadius="1"
+                        android:textColor="@color/solid_black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/user_dept_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:shadowColor="@color/trans_grey"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="1"
+                        android:textColor="@color/background_title_orange"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</ScrollView>

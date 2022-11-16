@@ -1,0 +1,79 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/solid_plain"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/atta_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/gallery_selected_default"
+            android:contentDescription="@string/hint_thumbnail"
+            android:paddingLeft="13dp"
+            android:paddingTop="13dp"
+            android:paddingRight="13dp"
+            android:paddingBottom="13dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:orientation="horizontal"
+            android:padding="3dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="top|right"
+                android:padding="3dp"
+                android:text="手绘图名称："
+                android:textColor="@color/solid_black"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/attaNameTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border_grey"
+                android:gravity="left"
+                android:hint=""
+                android:minLines="1"
+                android:padding="3dp"
+                android:text=""
+                android:textColor="@color/solid_black"
+                android:textColorHint="@color/text_hint"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/attaPostFixTv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="top|left"
+                android:padding="3dp"
+                android:text=""
+                android:textColor="@color/text_blue"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:layout_marginLeft="3dip"
+            android:padding="3dp"
+            android:text="注意：名称不要太长；不需要输入.png、.jpg等后缀"
+            android:textColor="@color/normal_text_color_grey" />
+    </LinearLayout>
+
+</ScrollView>

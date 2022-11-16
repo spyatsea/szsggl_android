@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_map_type"
+        android:icon="@drawable/menu_map_type"
+        android:title="切换地图类型"></item>
+    <item
+        android:id="@+id/menu_map_redraw"
+        android:icon="@drawable/menu_map_redraw"
+        android:title="重新绘制标记"></item>
+    <item
+        android:id="@+id/menu_map_locate"
+        android:icon="@drawable/menu_map_pin"
+        android:title="定位到地址"></item>
+    <item
+        android:id="@+id/menu_map_scale"
+        android:icon="@drawable/menu_map_scale"
+        android:title="默认缩放级别"></item>
+    <item
+        android:id="@+id/menu_map_info_status"
+        android:icon="@drawable/menu_list"
+        android:title="切换详情状态"></item>
+    <item
+        android:id="@+id/menu_map_home"
+        android:icon="@drawable/menu_house"
+        android:title="返回主页"></item>
+
+</menu>

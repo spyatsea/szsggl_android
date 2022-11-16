@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/solid_plain"
+    android:orientation="vertical">
+
+    <include
+        android:id="@id/title_bar_layout"
+        layout="@layout/title_bar_normal_blue_dark" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/solid_plain"
+        android:fadingEdge="none"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/solid_plain"
+            android:gravity="center_horizontal|top"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="8dip"
+                android:paddingRight="8dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:singleLine="true"
+                    android:text="任务名称："
+                    android:textColor="@color/solid_black"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/bizTitleTv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dip"
+                android:gravity="left|top"
+                android:minLines="1"
+                android:paddingLeft="8dip"
+                android:paddingTop="3dip"
+                android:paddingRight="8dip"
+                android:paddingBottom="3dip"
+                android:text=" "
+                android:textColor="@color/normal_text_color_grey"
+                android:textColorHint="@color/text_hint"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="8dip"
+                android:paddingRight="8dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:singleLine="true"
+                    android:text="记录时间："
+                    android:textColor="@color/solid_black"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/ctimeTv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dip"
+                android:gravity="left|top"
+                android:minLines="1"
+                android:paddingLeft="8dip"
+                android:paddingTop="3dip"
+                android:paddingRight="8dip"
+                android:paddingBottom="3dip"
+                android:text=" "
+                android:textColor="@color/normal_text_color_grey"
+                android:textColorHint="@color/text_hint"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="8dip"
+                android:paddingRight="8dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:singleLine="true"
+                    android:text="巡视点名称："
+                    android:textColor="@color/solid_black"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/resTitleTv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dip"
+                android:gravity="left|top"
+                android:minLines="1"
+                android:paddingLeft="8dip"
+                android:paddingTop="3dip"
+                android:paddingRight="8dip"
+                android:paddingBottom="3dip"
+                android:text=" "
+                android:textColor="@color/normal_text_color_grey"
+                android:textColorHint="@color/text_hint"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="8dip"
+                android:paddingRight="8dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="区域标识："
+                    android:textColor="@color/solid_black"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/scanUhfBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="33dip"
+                    android:layout_marginLeft="10dip"
+                    android:background="@drawable/custom_btn_white"
+                    android:drawableLeft="@drawable/table_icon_signal_normal"
+                    android:gravity="center"
+                    android:paddingLeft="5dip"
+                    android:paddingRight="5dip"
+                    android:shadowColor="@color/trans_grey"
+                    android:shadowDx="1"
+                    android:shadowDy="2"
+                    android:shadowRadius="1"
+                    android:singleLine="true"
+                    android:text="扫UHF卡定位"
+                    android:textColor="@color/solid_black"
+                    android:textSize="16sp"
+                    android:textStyle="normal"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/cardMacTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/text_green_dark"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/markContentLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:layout_marginLeft="8dip"
+                android:layout_marginTop="11dp"
+                android:layout_marginRight="8dip"
+                android:layout_marginBottom="3dip"
+                android:background="@drawable/border_grey_readonly"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <ImageButton
+                    android:id="@+id/addUhfBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/transparent_pic"
+                    android:contentDescription="@null"
+                    android:paddingLeft="5dip"
+                    android:paddingRight="5dip"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/sidebar_btn_add_blue_selector"
+                    android:visibility="visible" />
+
+                <ImageButton
+                    android:id="@+id/editUhfBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/transparent_pic"
+                    android:contentDescription="@null"
+                    android:paddingLeft="5dip"
+                    android:paddingRight="5dip"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/sidebar_btn_edit_blue_selector"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/markTv"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:hint="@string/hint_jc_mark_select"
+                    android:minLines="1"
+                    android:padding="3dip"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/solid_black"
+                    android:textColorHint="@color/text_hint"
+                    android:textSize="16sp" />
+
+                <ImageButton
+                    android:id="@+id/markChooseBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/transparent_pic"
+                    android:contentDescription="@null"
+                    android:paddingLeft="12dip"
+                    android:paddingRight="12dip"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/sidebar_down_arrow_dark_selector"
+                    android:visibility="visible" />
+
+                <ImageButton
+                    android:id="@+id/markDeleteBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/transparent_pic"
+                    android:contentDescription="@null"
+                    android:paddingLeft="8dip"
+                    android:paddingTop="3dip"
+                    android:paddingRight="8dip"
+                    android:paddingBottom="3dip"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/sidebar_btn_delete_selector"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="8dip"
+                android:paddingRight="8dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="经纬度："
+                    android:textColor="@color/solid_black"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/getLnglatBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="33dip"
+                    android:layout_marginLeft="10dip"
+                    android:background="@drawable/custom_btn_white"
+                    android:drawableLeft="@drawable/table_icon_address_normal"
+                    android:gravity="center"
+                    android:paddingLeft="5dip"
+                    android:paddingRight="5dip"
+                    android:shadowColor="@color/trans_grey"
+                    android:shadowDx="1"
+                    android:shadowDy="2"
+                    android:shadowRadius="1"
+                    android:singleLine="true"
+                    android:text="重新获取"
+                    android:textColor="@color/solid_black"
+                    android:textSize="16sp"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/lngLatTv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dip"
+                android:gravity="left|top"
+                android:minLines="1"
+                android:paddingLeft="8dip"
+                android:paddingTop="3dip"
+                android:paddingRight="8dip"
+                android:paddingBottom="3dip"
+                android:text="0.0,0.0"
+                android:textColor="@color/normal_text_color_grey"
+                android:textColorHint="@color/text_hint"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="8dip"
+                android:paddingRight="8dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:singleLine="true"
+                    android:text="记录人："
+                    android:textColor="@color/solid_black"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/jlrNameTv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dip"
+                android:gravity="left|top"
+                android:minLines="1"
+                android:paddingLeft="8dip"
+                android:paddingTop="3dip"
+                android:paddingRight="8dip"
+                android:paddingBottom="3dip"
+                android:text=" "
+                android:textColor="@color/normal_text_color_grey"
+                android:textColorHint="@color/text_hint"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="8dip"
+                android:paddingRight="8dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:singleLine="true"
+                    android:text="巡视负责人："
+                    android:textColor="@color/solid_black"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/fzrNameTv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dip"
+                android:gravity="left|top"
+                android:minLines="1"
+                android:paddingLeft="8dip"
+                android:paddingTop="3dip"
+                android:paddingRight="8dip"
+                android:paddingBottom="3dip"
+                android:text=" "
+                android:textColor="@color/normal_text_color_grey"
+                android:textColorHint="@color/text_hint"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="8dip"
+                android:paddingRight="8dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="现场图片："
+                    android:textColor="@color/solid_black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/photoNumTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/record_hintnum"
+                    android:textColor="@color/navigation_channel_text_color_grey"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/photoBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="33dip"
+                    android:layout_marginLeft="10.0dip"
+                    android:background="@drawable/custom_btn_white"
+                    android:drawableLeft="@drawable/table_icon_camera_normal"
+                    android:gravity="center"
+                    android:paddingLeft="10dip"
+                    android:shadowColor="@color/trans_grey"
+                    android:shadowDx="1"
+                    android:shadowDy="2"
+                    android:shadowRadius="1"
+                    android:singleLine="true"
+                    android:text="@string/take_photo"
+                    android:textColor="@color/solid_black"
+                    android:textSize="16sp"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/solid_plain"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="7dp">
+
+                <Gallery
+                    android:id="@+id/photoGallery"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:minHeight="20dp"
+                    android:spacing="5dp"
+                    android:unselectedAlpha="0.3" />
+
+                <TextView
+                    android:id="@+id/photoDescTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="2dp"
+                    android:background="@color/trans_orange_lighter"
+                    android:gravity="left"
+                    android:padding="3dp"
+                    android:textColor="@color/text_blue"
+                    android:textSize="14sp"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="8dip"
+                android:paddingRight="8dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="现场视频："
+                    android:textColor="@color/solid_black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/videoNumTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/record_hintnum"
+                    android:textColor="@color/navigation_channel_text_color_grey"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/videoBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="33dip"
+                    android:layout_marginLeft="10dip"
+                    android:background="@drawable/custom_btn_white"
+                    android:drawableLeft="@drawable/table_icon_video_normal"
+                    android:gravity="center"
+                    android:paddingLeft="10dip"
+                    android:shadowColor="@color/trans_grey"
+                    android:shadowDx="1"
+                    android:shadowDy="2"
+                    android:shadowRadius="1"
+                    android:singleLine="true"
+                    android:text="@string/take_video"
+                    android:textColor="@color/solid_black"
+                    android:textSize="16sp"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/solid_plain"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="7dp">
+
+                <Gallery
+                    android:id="@+id/videoGallery"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:minHeight="20dp"
+                    android:spacing="5dp"
+                    android:unselectedAlpha="0.3" />
+
+                <TextView
+                    android:id="@+id/videoDescTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="2dp"
+                    android:background="@color/trans_blue_lighter"
+                    android:gravity="left"
+                    android:padding="3dp"
+                    android:textColor="@color/text_blue"
+                    android:textSize="14sp"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="8dip"
+                android:paddingRight="8dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="现场音频："
+                    android:textColor="@color/solid_black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/audioNumTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/record_hintnum"
+                    android:textColor="@color/navigation_channel_text_color_grey"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/audioBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="33dip"
+                    android:layout_marginLeft="10dip"
+                    android:background="@drawable/custom_btn_white"
+                    android:drawableLeft="@drawable/table_icon_mic_normal"
+                    android:gravity="center"
+                    android:paddingLeft="10dip"
+                    android:shadowColor="@color/trans_grey"
+                    android:shadowDx="1"
+                    android:shadowDy="2"
+                    android:shadowRadius="1"
+                    android:singleLine="true"
+                    android:text="@string/take_audio"
+                    android:textColor="@color/solid_black"
+                    android:textSize="16sp"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/solid_plain"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="7dp">
+
+                <Gallery
+                    android:id="@+id/audioGallery"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:minHeight="20dp"
+                    android:spacing="5dp"
+                    android:unselectedAlpha="0.3" />
+
+                <TextView
+                    android:id="@+id/audioDescTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="2dp"
+                    android:background="@color/trans_green_lighter"
+                    android:gravity="left"
+                    android:padding="3dp"
+                    android:textColor="@color/text_blue"
+                    android:textSize="14sp"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@color/solid_plain"
+                android:visibility="visible" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@id/bottomBar"
+        android:layout_width="fill_parent"
+        android:layout_height="54dp"
+        android:layout_margin="0dp"
+        android:background="@drawable/navigation_bar_bottom"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:visibility="visible">
+
+        <Button
+            android:id="@+id/cancelBtn"
+            android:layout_width="150dp"
+            android:layout_height="38.0dip"
+            android:background="@drawable/custom_btn_card_red"
+            android:gravity="center"
+            android:text="@string/cancel_blank"
+            android:textColor="@color/solid_plain"
+            android:textSize="18.0sp" />
+
+        <Button
+            android:id="@+id/submitBtn"
+            android:layout_width="150dp"
+            android:layout_height="38.0dip"
+            android:layout_marginLeft="30.0dip"
+            android:background="@drawable/custom_btn_card_green"
+            android:gravity="center"
+            android:text="@string/record_save_blank"
+            android:textColor="@color/solid_plain"
+            android:textSize="18.0sp" />
+    </LinearLayout>
+
+</LinearLayout>

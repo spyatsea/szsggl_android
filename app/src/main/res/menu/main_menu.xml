@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/config"
+        android:icon="@drawable/menu_config_v"
+        android:title="@string/config">
+        <menu>
+            <item
+                android:id="@+id/menu_resetDB"
+                android:icon="@drawable/menu_database_refresh"
+                android:title="@string/resetDB" />
+            <item
+                android:id="@+id/menu_uploadTestData"
+                android:icon="@drawable/menu_upload"
+                android:title="@string/uploadTestData"></item>
+        </menu>
+    </item>
+    <item
+        android:id="@+id/baseInfoSync"
+        android:icon="@drawable/menu_table_refresh"
+        android:title="@string/accountDataSync"></item>
+    <item
+        android:id="@+id/menu_update"
+        android:icon="@drawable/menu_update"
+        android:title="@string/checkUpdate"></item>
+    <item
+        android:id="@+id/menu_serverAddr"
+        android:icon="@drawable/menu_server"
+        android:title="@string/serverAddr"></item>
+    <item
+        android:id="@+id/menu_about"
+        android:icon="@drawable/menu_info"
+        android:title="@string/about"></item>
+
+</menu>

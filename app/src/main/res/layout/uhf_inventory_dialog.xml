@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/light_gray">
+
+
+  <TextView
+    android:id="@+id/label_epc"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textColor="@color/red"/>
+  <TextView
+    android:id="@+id/label_tid"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_centerVertical="true"
+    android:textColor="@color/red"/>
+
+  <Button
+    android:id="@+id/to_read_write"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:text="读写" />
+
+  <Button
+    android:id="@+id/to_lock_kill"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true"
+    android:text="锁定销毁" />
+
+  <Button
+    android:id="@+id/cancel"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentEnd="true"
+    android:layout_alignParentRight="true"
+
+
+    android:text="取消" />
+
+
+</RelativeLayout>

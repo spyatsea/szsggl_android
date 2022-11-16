@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer name="xxxhdpi_type">0</integer>
+    <integer name="gallery_thumbnail_width">400</integer>
+    <integer name="gallery_thumbnail_height">300</integer>
+
+</resources>

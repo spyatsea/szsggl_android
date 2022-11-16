@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <ImageButton
+        android:id="@+id/icon"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/grid_btn_selector_bg"
+        android:contentDescription="@null"
+        android:paddingBottom="25dp"
+        android:src="@drawable/item_icon_update" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:drawSelectorOnTop="true"
+        android:text="@string/title_grid_m0"
+        android:textColor="@color/text_grid_item_title"
+        android:textSize="@dimen/main_grid_item_textSize"
+        android:textStyle="normal" />
+
+</RelativeLayout>

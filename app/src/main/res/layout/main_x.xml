@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/base_layout_main_panel"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/solid_plain"
+    android:orientation="vertical">
+
+    <include
+        android:id="@id/title_bar_layout"
+        layout="@layout/title_bar_main_x" />
+
+    <FrameLayout
+        android:id="@+id/contentView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/solid_plain">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/main_bg"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/m1_layout"
+                        android:layout_width="139dp"
+                        android:layout_height="112dp"
+                        android:addStatesFromChildren="true"
+                        android:background="@drawable/m1_color_selector"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/m1_btn"
+                            style="@style/NavigateView.Btn"
+                            android:background="@drawable/transparent_pic"
+                            android:button="@null"
+                            android:drawableTop="@drawable/m_1"
+                            android:paddingTop="@dimen/main_btn_padding_top_big"
+                            android:text="@string/title_bar_m1"
+                            android:textColor="@color/solid_plain"
+                            android:textSize="@dimen/main_btn_text_size_big" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/to_landscape"
+                        android:layout_marginLeft="3dip"
+                        android:layout_marginTop="3dip">
+
+                    </ImageView>
+                </FrameLayout>
+
+                <View
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:background="@color/transparent" />
+
+                <LinearLayout
+                    android:id="@+id/m2_layout"
+                    android:layout_width="139dp"
+                    android:layout_height="112dp"
+                    android:addStatesFromChildren="true"
+                    android:background="@drawable/m2_color_selector"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/m2_btn"
+                        style="@style/NavigateView.Btn"
+                        android:background="@drawable/transparent_pic"
+                        android:button="@null"
+                        android:drawableTop="@drawable/m_2"
+                        android:paddingTop="@dimen/main_btn_padding_top_big"
+                        android:text="@string/title_bar_m2"
+                        android:textColor="@color/solid_plain"
+                        android:textSize="@dimen/main_btn_text_size_big" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:background="@color/transparent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/m3_layout"
+                    android:layout_width="88dp"
+                    android:layout_height="110dp"
+                    android:addStatesFromChildren="true"
+                    android:background="@drawable/m3_color_selector"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/m3_btn"
+                        style="@style/NavigateView.Btn"
+                        android:background="@drawable/transparent_pic"
+                        android:button="@null"
+                        android:drawableTop="@drawable/m_3"
+                        android:paddingTop="@dimen/main_btn_padding_top_normal"
+                        android:text="@string/title_bar_m3"
+                        android:textColor="@color/solid_black"
+                        android:textSize="@dimen/main_btn_text_size_small" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:background="@color/transparent" />
+
+                <LinearLayout
+                    android:id="@+id/m4_layout"
+                    android:layout_width="88dp"
+                    android:layout_height="110dp"
+                    android:addStatesFromChildren="true"
+                    android:background="@drawable/m4_color_selector"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/m4_btn"
+                        style="@style/NavigateView.Btn"
+                        android:background="@drawable/transparent_pic"
+                        android:button="@null"
+                        android:drawableTop="@drawable/m_4"
+                        android:paddingTop="@dimen/main_btn_padding_top_normal"
+                        android:text="@string/title_bar_m4"
+                        android:textColor="@color/solid_black"
+                        android:textSize="@dimen/main_btn_text_size_small" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="13dp"
+                    android:layout_height="13dp"
+                    android:background="@color/transparent" />
+
+                <LinearLayout
+                    android:id="@+id/m5_layout"
+                    android:layout_width="88dp"
+                    android:layout_height="110dp"
+                    android:addStatesFromChildren="true"
+                    android:background="@drawable/m5_color_selector"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/m5_btn"
+                        style="@style/NavigateView.Btn"
+                        android:background="@drawable/transparent_pic"
+                        android:button="@null"
+                        android:drawableTop="@drawable/m_5"
+                        android:paddingTop="@dimen/main_btn_padding_top_normal"
+                        android:text="@string/title_bar_m5"
+                        android:textColor="@color/solid_black"
+                        android:textSize="@dimen/main_btn_text_size_small" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:background="@color/transparent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/m7_layout"
+                    android:layout_width="138dp"
+                    android:layout_height="60dp"
+                    android:addStatesFromChildren="true"
+                    android:background="@drawable/border_blue_grey"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/m7_btn"
+                        style="@style/NavigateView.Btn"
+                        android:background="@drawable/m6_color_selector"
+                        android:button="@null"
+                        android:drawableLeft="@drawable/m_7_v"
+                        android:drawablePadding="-10dip"
+                        android:paddingLeft="5dip"
+                        android:paddingTop="0dip"
+                        android:text="@string/title_bar_m7"
+                        android:textColor="@color/solid_plain"
+                        android:textSize="@dimen/main_btn_text_size_normal" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="14dp"
+                    android:layout_height="13dp"
+                    android:background="@color/transparent" />
+
+                <LinearLayout
+                    android:id="@+id/m8_layout"
+                    android:layout_width="138dp"
+                    android:layout_height="60dp"
+                    android:addStatesFromChildren="true"
+                    android:background="@drawable/border_table_blue_02"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/m8_btn"
+                        style="@style/NavigateView.Btn"
+                        android:background="@drawable/m6_color_selector"
+                        android:button="@null"
+                        android:drawableLeft="@drawable/m_8_v"
+                        android:drawablePadding="-10dip"
+                        android:paddingLeft="5dip"
+                        android:paddingTop="0dip"
+                        android:text="@string/title_bar_m8"
+                        android:textColor="@color/solid_plain"
+                        android:textSize="@dimen/main_btn_text_size_normal" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <View
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:background="@color/transparent" />
+
+                <RelativeLayout
+                    android:id="@+id/m6_layout"
+                    android:layout_width="290dp"
+                    android:layout_height="51dp"
+                    android:addStatesFromChildren="false"
+                    android:background="@drawable/m6_color_selector"
+                    android:visibility="visible">
+
+                    <ImageButton
+                        android:id="@+id/m6_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="@dimen/main_btn_p_margin_left_big"
+                        android:background="@drawable/transparent_pic"
+                        android:drawingCacheQuality="auto"
+                        android:src="@drawable/m_6" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:paddingRight="@dimen/main_btn_t_margin_right_big"
+                        android:text="UHF测试"
+                        android:textColor="@color/solid_plain"
+                        android:textSize="@dimen/main_btn_text_size_big" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <include
+        android:id="@id/navigation_layout"
+        layout="@layout/main_navigation_bar_x"
+        android:layout_width="match_parent"
+        android:layout_height="54.0dip"
+        android:visibility="visible" />
+
+</LinearLayout>

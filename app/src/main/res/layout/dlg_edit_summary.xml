@@ -1,0 +1,231 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/solid_plain"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/solid_plain"
+        android:fadingEdge="none"
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="5dp"
+        android:textSize="16sp" >
+
+        <EditText
+            android:id="@+id/textView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dip"
+            android:background="@drawable/border_grey"
+            android:gravity="left"
+            android:minLines="3"
+            android:padding="3dp"
+            android:text=""
+            android:textColor="@color/solid_black"
+            android:textSize="15sp"
+            android:hint="请输入巡视结束总结…"
+            android:textColorHint="@color/text_hint" />
+
+        <LinearLayout
+            android:id="@+id/record_voice_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="2dp" >
+
+            <ImageView
+                android:id="@+id/record_voice_iv"
+                android:layout_width="100dp"
+                android:layout_height="104dp"
+                android:background="@drawable/voice_recording"
+                android:contentDescription="@null" />
+
+            <LinearLayout
+                android:id="@+id/record_voice_start_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageButton
+                    android:id="@+id/record_voice_start"
+                    android:layout_width="56.0dip"
+                    android:layout_height="56.0dip"
+                    android:background="@drawable/microphone_start_selector"
+                    android:contentDescription="@string/voice_start_recording"
+                    android:scaleType="centerInside" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/voice_start_recording"
+                    android:textColor="@color/text_green"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/record_voice_stop_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <ImageButton
+                    android:id="@+id/record_voice_stop"
+                    android:layout_width="56.0dip"
+                    android:layout_height="56.0dip"
+                    android:background="@drawable/microphone_stop_selector"
+                    android:contentDescription="@string/voice_stop_recording"
+                    android:scaleType="centerInside" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/voice_stop_recording"
+                    android:textColor="@color/solid_red"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/play_voice_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="0dp"
+            android:visibility="visible" >
+
+            <ImageView
+                android:id="@+id/play_voice_iv"
+                android:layout_width="100dp"
+                android:layout_height="104dp"
+                android:background="@drawable/voice_playing"
+                android:contentDescription="@null"
+                android:scaleType="centerInside"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:id="@+id/play_voice_start_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageButton
+                    android:id="@+id/play_voice_start"
+                    android:layout_width="56.0dip"
+                    android:layout_height="56.0dip"
+                    android:background="@drawable/microphone_start_selector"
+                    android:contentDescription="@string/voice_play"
+                    android:scaleType="centerInside" />
+
+                <TextView
+                    android:id="@+id/play_voice_start_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/voice_play"
+                    android:textColor="@color/text_green"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/play_voice_pause_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone" >
+
+                <ImageButton
+                    android:id="@+id/play_voice_pause"
+                    android:layout_width="56.0dip"
+                    android:layout_height="56.0dip"
+                    android:background="@drawable/microphone_pause_selector"
+                    android:contentDescription="@string/voice_pause"
+                    android:scaleType="centerInside" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/voice_pause"
+                    android:textColor="@color/text_blue_light"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/play_voice_stop_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="visible" >
+
+                <ImageButton
+                    android:id="@+id/play_voice_stop"
+                    android:layout_width="56.0dip"
+                    android:layout_height="56.0dip"
+                    android:background="@drawable/microphone_stop_selector"
+                    android:contentDescription="@string/voice_stop"
+                    android:scaleType="centerInside" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/voice_stop"
+                    android:textColor="@color/solid_red"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/play_voice_delete_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="visible" >
+
+                <ImageButton
+                    android:id="@+id/play_voice_delete"
+                    android:layout_width="56.0dip"
+                    android:layout_height="56.0dip"
+                    android:background="@drawable/microphone_delete_selector"
+                    android:contentDescription="@string/delete"
+                    android:scaleType="centerInside" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/delete"
+                    android:textColor="@color/text_purple"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

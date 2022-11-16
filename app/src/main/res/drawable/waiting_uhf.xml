@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list android:oneshot="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="300" android:drawable="@drawable/uhf_00" />
+    <item android:duration="50" android:drawable="@drawable/uhf_01" />
+    <item android:duration="200" android:drawable="@drawable/uhf_02" />
+    <item android:duration="50" android:drawable="@drawable/uhf_03" />
+    <item android:duration="200" android:drawable="@drawable/uhf_04" />
+    <item android:duration="50" android:drawable="@drawable/uhf_05" />
+    <item android:duration="300" android:drawable="@drawable/uhf_06" />
+</animation-list>

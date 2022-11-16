@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" style="@style/ptr_footerContainer">
+    <LinearLayout android:id="@+id/ptr_id_footer" style="@style/ptr_footer">
+        <LinearLayout android:id="@+id/ptr_id_indicatorContainer" style="@style/ptr_indicatorContainer">
+		    <ProgressBar android:id="@+id/ptr_id_spinner" style="@style/ptr_spinner" android:layout_gravity="center" />
+	    </LinearLayout>
+
+        <LinearLayout android:id="@+id/ptr_id_textwrapper" style="@style/ptr_textwrapper">
+            <TextView android:id="@+id/ptr_id_text" style="@style/ptr_text" android:text="@string/alert_getMore"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:id="@+id/ptr_id_footerSenser" style="@style/ptr_footerSenser"></LinearLayout>
+</LinearLayout>

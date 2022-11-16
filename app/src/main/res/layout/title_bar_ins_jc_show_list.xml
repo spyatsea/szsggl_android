@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/title_bar_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/title_bar_layout_height"
+    android:background="@color/background_title_blue_dark"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <ImageButton
+        android:id="@id/backBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="5dp"
+        android:background="@null"
+        android:contentDescription="@string/back"
+        android:gravity="center"
+        android:paddingLeft="5dip"
+        android:paddingRight="5dip"
+        android:src="@drawable/title_back_btn"
+        android:text="@null"
+        android:textSize="17.0sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15.0dip"
+        android:singleLine="true"
+        android:text="巡视建筑物："
+        android:textColor="@color/title_bar_title_color"
+        android:textSize="@dimen/app_title_font_size_smaller_x3" />
+
+    <TextView
+        android:id="@id/titleTv"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5.0dip"
+        android:layout_weight="1"
+        android:background="@drawable/border_trans_blue_grey"
+        android:ellipsize="end"
+        android:paddingLeft="5dip"
+        android:paddingTop="3dip"
+        android:paddingRight="5dip"
+        android:paddingBottom="3dip"
+        android:singleLine="true"
+        android:text=""
+        android:textColor="@color/title_bar_title_color"
+        android:textSize="@dimen/app_title_font_size_smaller_x3" />
+
+    <TextView
+        android:id="@+id/markTitleTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10.0dip"
+        android:singleLine="true"
+        android:text="区域标识："
+        android:textColor="@color/title_bar_title_color"
+        android:textSize="@dimen/app_title_font_size_smaller_x3"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/markContentLayout"
+        android:layout_width="170.0dip"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|center_vertical"
+        android:layout_marginRight="5.0dip"
+        android:background="@drawable/border_trans_blue_grey"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <EditText
+            android:id="@+id/markTv"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            android:ellipsize="end"
+            android:enabled="false"
+            android:gravity="center_vertical"
+            android:hint=""
+            android:imeOptions="actionDone"
+            android:minLines="1"
+            android:paddingLeft="5dip"
+            android:paddingTop="3dip"
+            android:paddingRight="5dip"
+            android:paddingBottom="3dip"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/title_bar_title_color"
+            android:textColorHint="@color/normal_text_color_light_grey"
+            android:textSize="@dimen/app_title_font_size_smaller_x3" />
+    </LinearLayout>
+</LinearLayout>

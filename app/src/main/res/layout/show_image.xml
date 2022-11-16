@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/solid_plain"
+    android:orientation="vertical">
+
+    <include
+        android:id="@id/title_bar_layout"
+        layout="@layout/title_bar_show_image" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+		android:background="@color/solid_black"
+        android:orientation="vertical" >
+
+        <com.cox.android.ui.TouchImageView
+            android:id="@+id/picView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+        </com.cox.android.ui.TouchImageView>
+
+        <Button
+            android:id="@+id/locBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/locbtn_selector"
+            android:drawableRight="@drawable/iconmark"
+            android:paddingBottom="2dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:paddingTop="2dp"
+            android:text="@string/info_loc_info"
+            android:textColor="@color/text_green"
+            android:textSize="16sp"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+</LinearLayout>

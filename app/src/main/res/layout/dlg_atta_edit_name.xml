@@ -1,0 +1,42 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/solid_plain"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingLeft="5dp"
+    android:paddingTop="5dp"
+    android:paddingRight="5dp"
+    android:paddingBottom="5dp"
+    android:textSize="16sp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/attaNameTv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dip"
+            android:background="@drawable/border_grey"
+            android:gravity="left"
+            android:hint="@string/input_attaName"
+            android:minLines="3"
+            android:padding="3dp"
+            android:text=""
+            android:textColor="@color/solid_black"
+            android:textColorHint="@color/text_hint"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:padding="3dp"
+            android:text="注意：名称不要太长；不需要输入.png、.mp4等后缀"
+            android:textColor="@color/text_blue" />
+    </LinearLayout>
+
+</ScrollView>

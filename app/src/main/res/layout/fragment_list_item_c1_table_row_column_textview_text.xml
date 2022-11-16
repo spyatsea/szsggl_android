@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tableColumnLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:addStatesFromChildren="true"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/tableColumn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:minLines="1"
+        android:padding="2dp"
+        android:textColor="@color/solid_black"
+        android:textSize="16sp"
+        android:textStyle="bold"  />
+
+</LinearLayout>

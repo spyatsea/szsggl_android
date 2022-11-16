@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list android:oneshot="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="100" android:drawable="@drawable/rotating_99" />
+    <item android:duration="100" android:drawable="@drawable/rotating_rev_land_00" />
+    <item android:duration="500" android:drawable="@drawable/rotating_rev_land_01" />
+    <item android:duration="100" android:drawable="@drawable/rotating_rev_land_02" />
+    <item android:duration="200" android:drawable="@drawable/rotating_rev_land_03" />
+    <item android:duration="400" android:drawable="@drawable/rotating_rev_land_01" />
+    <item android:duration="100" android:drawable="@drawable/rotating_rev_land_02" />
+    <item android:duration="200" android:drawable="@drawable/rotating_rev_land_03" />
+    <item android:duration="300" android:drawable="@drawable/rotating_rev_land_01" />
+    <item android:duration="100" android:drawable="@drawable/rotating_rev_land_04" />
+    <item android:duration="200" android:drawable="@drawable/rotating_rev_land_05" />
+    <item android:duration="100" android:drawable="@drawable/rotating_rev_land_06" />
+    <item android:duration="600" android:drawable="@drawable/rotating_rev_land_07" />
+    <item android:duration="100" android:drawable="@drawable/rotating_rev_land_08" />
+    <item android:duration="100" android:drawable="@drawable/rotating_99" />
+</animation-list>

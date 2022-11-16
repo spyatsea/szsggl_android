@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/solid_plain"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:orientation="vertical"
+        android:paddingLeft="7dp"
+        android:paddingTop="7dp"
+        android:paddingRight="7dp"
+        android:paddingBottom="5dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dip"
+            android:lineSpacingExtra="1dip"
+            android:paddingTop="1dp"
+            android:paddingBottom="1dp"
+            android:text="1、“继续下载”将会下载所有未下载的附件。"
+            android:textColor="@color/text_black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dip"
+            android:lineSpacingExtra="1dip"
+            android:paddingTop="1dp"
+            android:paddingBottom="1dp"
+            android:text="2、“重新下载”将会重新下载所有附件。如果该附件之前已经下载完成，则将会先删除该附件，然后重新下载。"
+            android:textColor="@color/text_black"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+</ScrollView>

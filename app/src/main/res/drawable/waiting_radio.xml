@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list android:oneshot="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="300" android:drawable="@drawable/radio_00" />
+    <item android:duration="50" android:drawable="@drawable/radio_01" />
+    <item android:duration="200" android:drawable="@drawable/radio_02" />
+    <item android:duration="50" android:drawable="@drawable/radio_03" />
+    <item android:duration="200" android:drawable="@drawable/radio_04" />
+    <item android:duration="50" android:drawable="@drawable/radio_05" />
+    <item android:duration="300" android:drawable="@drawable/radio_06" />
+</animation-list>

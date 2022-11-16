@@ -1,0 +1,1004 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@id/title_bar_layout"
+        layout="@layout/title_bar_me_main_x" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0"
+        android:background="@color/background"
+        android:fadingEdge="none"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background"
+            android:gravity="center_horizontal|top"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100.0dip"
+                android:background="@color/background"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60.0dip">
+
+                    <ImageView
+                        android:id="@+id/userImage"
+                        android:layout_width="60.0dip"
+                        android:layout_height="60.0dip"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="30.0dip"
+                        android:background="@drawable/transparent_pic"
+                        android:contentDescription="@null"
+                        android:src="@drawable/default_head_white" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/userImage"
+                        android:layout_marginLeft="10dip"
+                        android:layout_toRightOf="@id/userImage"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@id/newsItemTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:text="未登录"
+                            android:textColor="@color/text_black"
+                            android:textSize="17sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/newsItemAccount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/normal_text_color_grey"
+                            android:textSize="14sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/newsItemPro"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/text_purple"
+                            android:paddingLeft="2dip"
+                            android:paddingTop="1dip"
+                            android:paddingRight="2dip"
+                            android:paddingBottom="1dip"
+                            android:text=""
+                            android:textColor="@color/solid_plain"
+                            android:textSize="13sp"
+                            android:textStyle="normal"
+                            android:visibility="gone" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8.0dip"
+                android:layout_marginBottom="5.0dip"
+                android:background="#FFE6E6E6"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:background="@drawable/text_border_grey_white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="42.0dip"
+                    android:layout_margin="1.0dip"
+                    android:addStatesFromChildren="true"
+                    android:background="@drawable/me_item_bg_color_selector"
+                    android:padding="2.0dip">
+
+                    <TextView
+                        android:id="@+id/me_baseInfoSync_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="8.0dip"
+                        android:layout_marginRight="8.0dip"
+                        android:drawableRight="@drawable/right"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:text="@string/baseDataSync"
+                        android:textColor="@color/text_black"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/view_grey" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="42.0dip"
+                    android:layout_margin="1.0dip"
+                    android:addStatesFromChildren="true"
+                    android:background="@drawable/me_item_bg_color_selector"
+                    android:padding="2.0dip">
+
+                    <TextView
+                        android:id="@+id/me_dataDownload_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="8.0dip"
+                        android:layout_marginRight="8.0dip"
+                        android:drawableRight="@drawable/right"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:text="@string/title_bar_m3"
+                        android:textColor="@color/text_black"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/view_grey" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="42.0dip"
+                    android:layout_margin="1.0dip"
+                    android:addStatesFromChildren="true"
+                    android:background="@drawable/me_item_bg_color_selector"
+                    android:padding="2.0dip">
+
+                    <TextView
+                        android:id="@+id/me_dataUpload_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="8.0dip"
+                        android:layout_marginRight="8.0dip"
+                        android:drawableRight="@drawable/right"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:text="@string/title_bar_m4"
+                        android:textColor="@color/text_black"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10.0dip" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:background="@drawable/text_border_grey_white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="42.0dip"
+                    android:layout_margin="1.0dip"
+                    android:addStatesFromChildren="false"
+                    android:background="@drawable/me_item_bg_color_selector"
+                    android:padding="2.0dip">
+
+                    <TextView
+                        android:id="@+id/autoDownloadAtta"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="8.0dip"
+                        android:layout_marginRight="8.0dip"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:text="@string/autoDownloadAtta"
+                        android:textColor="@color/text_black"
+                        android:textSize="16sp" />
+
+                    <Switch
+                        android:id="@+id/me_autoDownloadAtta_switch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="8.0dip"
+                        android:text=""
+                        android:textOff="否"
+                        android:textOn="是" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="6.0dip"
+                    android:layout_marginRight="6.0dip"
+                    android:background="@color/title_bar_title_color_grey" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="9.0dip"
+                    android:layout_marginRight="9.0dip"
+                    android:gravity="left|top"
+                    android:lineSpacingExtra="3dip"
+                    android:minLines="1"
+                    android:paddingLeft="2dip"
+                    android:paddingTop="6dip"
+                    android:paddingRight="2dip"
+                    android:paddingBottom="6dip"
+                    android:text="开启本选项后，在水工资源、水工维修的详情界面会自动下载附件。\n为节省带宽，本选项默认为关闭状态。\n本选项不影响水工巡视模块。因为水工巡视任务的附件会在下载任务时自动下载到终端。"
+                    android:textColor="@color/normal_text_color_grey"
+                    android:textColorHint="@color/text_hint"
+                    android:textSize="13sp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/view_grey" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="42.0dip"
+                    android:layout_margin="1.0dip"
+                    android:addStatesFromChildren="false"
+                    android:background="@drawable/me_item_bg_color_selector"
+                    android:padding="2.0dip">
+
+                    <TextView
+                        android:id="@+id/autoPlayInsAudio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="8.0dip"
+                        android:layout_marginRight="8.0dip"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:text="@string/autoPlayInsAudio"
+                        android:textColor="@color/text_black"
+                        android:textSize="16sp" />
+
+                    <Switch
+                        android:id="@+id/me_autoPlayInsAudio_switch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="8.0dip"
+                        android:text=""
+                        android:textOff="否"
+                        android:textOn="是" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="6.0dip"
+                    android:layout_marginRight="6.0dip"
+                    android:background="@color/title_bar_title_color_grey" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="9.0dip"
+                    android:layout_marginRight="9.0dip"
+                    android:gravity="left|top"
+                    android:lineSpacingExtra="3dip"
+                    android:minLines="1"
+                    android:paddingLeft="2dip"
+                    android:paddingTop="6dip"
+                    android:paddingRight="2dip"
+                    android:paddingBottom="6dip"
+                    android:text="打开本选项后，在巡视时会播放“正常”、“异常”等声音提示。辅助提醒用户进行相关操作。\n本选项默认为关闭状态。"
+                    android:textColor="@color/normal_text_color_grey"
+                    android:textColorHint="@color/text_hint"
+                    android:textSize="13sp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/view_grey" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="42.0dip"
+                    android:layout_margin="1.0dip"
+                    android:addStatesFromChildren="false"
+                    android:background="@drawable/me_item_bg_color_selector"
+                    android:padding="2.0dip">
+
+                    <TextView
+                        android:id="@+id/reverseRotate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="8.0dip"
+                        android:layout_marginRight="8.0dip"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:text="@string/reverseRotate"
+                        android:textColor="@color/text_black"
+                        android:textSize="16sp" />
+
+                    <Switch
+                        android:id="@+id/me_reverseRotate_switch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="8.0dip"
+                        android:text=""
+                        android:textOff="否"
+                        android:textOn="是" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="6.0dip"
+                    android:layout_marginRight="6.0dip"
+                    android:background="@color/title_bar_title_color_grey" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="9.0dip"
+                    android:layout_marginRight="9.0dip"
+                    android:gravity="left|top"
+                    android:lineSpacingExtra="3dip"
+                    android:minLines="1"
+                    android:paddingLeft="2dip"
+                    android:paddingTop="6dip"
+                    android:paddingRight="2dip"
+                    android:paddingBottom="6dip"
+                    android:text="打开本选项后，切换成横屏时会逆时针旋转画面。\n本选项默认为关闭状态。"
+                    android:textColor="@color/normal_text_color_grey"
+                    android:textColorHint="@color/text_hint"
+                    android:textSize="13sp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/view_grey" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="42.0dip"
+                    android:layout_margin="1.0dip"
+                    android:addStatesFromChildren="false"
+                    android:background="@drawable/text_bg_white"
+                    android:padding="2.0dip">
+
+                    <TextView
+                        android:id="@+id/uhfPowerTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="8.0dip"
+                        android:layout_marginRight="8.0dip"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:text="@string/uhfPowerTitle"
+                        android:textColor="@color/text_black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/me_uhfPower_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="8.0dip"
+                        android:background="@drawable/border_grey_readonly"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:minWidth="30.0dip"
+                        android:paddingLeft="8.0dip"
+                        android:paddingRight="8.0dip"
+                        android:text=""
+                        android:textColor="@color/normal_text_color_grey"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="6.0dip"
+                    android:layout_marginRight="6.0dip"
+                    android:background="@color/title_bar_title_color_grey" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="9.0dip"
+                    android:layout_marginRight="9.0dip"
+                    android:gravity="left|top"
+                    android:lineSpacingExtra="3dip"
+                    android:minLines="1"
+                    android:paddingLeft="2dip"
+                    android:paddingTop="6dip"
+                    android:paddingRight="2dip"
+                    android:paddingBottom="6dip"
+                    android:text="范围是1-30，默认为30。可以根据工作需要来调整UHF天线功率。例如：\n1、调高扫描功率，这样可以扩大扫描范围；\n2、调低扫描功率，并接近UHF卡片，这样可以排除其他卡片或设备的干扰。"
+                    android:textColor="@color/normal_text_color_grey"
+                    android:textColorHint="@color/text_hint"
+                    android:textSize="13sp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/view_grey" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="42.0dip"
+                    android:layout_margin="1.0dip"
+                    android:addStatesFromChildren="false"
+                    android:background="@drawable/text_bg_white"
+                    android:padding="2.0dip">
+
+                    <TextView
+                        android:id="@+id/autoDkOverTimeTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="8.0dip"
+                        android:layout_marginRight="8.0dip"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:text="@string/autoDkOverTimeTitle"
+                        android:textColor="@color/text_black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/me_autoDkOverTime_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="8.0dip"
+                        android:background="@drawable/border_grey_readonly"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:minWidth="30.0dip"
+                        android:paddingLeft="8.0dip"
+                        android:paddingRight="8.0dip"
+                        android:text=""
+                        android:textColor="@color/normal_text_color_grey"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="6.0dip"
+                    android:layout_marginRight="6.0dip"
+                    android:background="@color/title_bar_title_color_grey" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="9.0dip"
+                    android:layout_marginRight="9.0dip"
+                    android:gravity="left|top"
+                    android:lineSpacingExtra="3dip"
+                    android:minLines="1"
+                    android:paddingLeft="2dip"
+                    android:paddingTop="6dip"
+                    android:paddingRight="2dip"
+                    android:paddingBottom="6dip"
+                    android:text="在水工巡视的“扫卡快签”界面，需要间隔多长时间才能保存同一个区域标识的信息。默认为30秒，不能小于10秒。"
+                    android:textColor="@color/normal_text_color_grey"
+                    android:textColorHint="@color/text_hint"
+                    android:textSize="13sp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/view_grey" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="42.0dip"
+                    android:layout_margin="1.0dip"
+                    android:addStatesFromChildren="false"
+                    android:background="@drawable/text_bg_white"
+                    android:padding="2.0dip">
+
+                    <TextView
+                        android:id="@+id/autoDkStayTimeTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="8.0dip"
+                        android:layout_marginRight="8.0dip"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:text="@string/autoDkStayTimeTitle"
+                        android:textColor="@color/text_black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/me_autoDkStayTime_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="8.0dip"
+                        android:background="@drawable/border_grey_readonly"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:minWidth="30.0dip"
+                        android:paddingLeft="8.0dip"
+                        android:paddingRight="8.0dip"
+                        android:text=""
+                        android:textColor="@color/normal_text_color_grey"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="6.0dip"
+                    android:layout_marginRight="6.0dip"
+                    android:background="@color/title_bar_title_color_grey" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="9.0dip"
+                    android:layout_marginRight="9.0dip"
+                    android:gravity="left|top"
+                    android:lineSpacingExtra="3dip"
+                    android:minLines="1"
+                    android:paddingLeft="2dip"
+                    android:paddingTop="6dip"
+                    android:paddingRight="2dip"
+                    android:paddingBottom="6dip"
+                    android:text="在水工巡视的“扫卡快签”界面，发现的区域信息可以在界面上保留多长时间。默认为15秒，不能小于5秒。"
+                    android:textColor="@color/normal_text_color_grey"
+                    android:textColorHint="@color/text_hint"
+                    android:textSize="13sp" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/view_grey" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="42.0dip"
+                    android:layout_margin="1.0dip"
+                    android:addStatesFromChildren="false"
+                    android:background="@drawable/text_bg_white"
+                    android:padding="2.0dip">
+
+                    <TextView
+                        android:id="@+id/uhfKeyCodeTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="8.0dip"
+                        android:layout_marginRight="8.0dip"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:text="@string/uhfKeyCodeTitle"
+                        android:textColor="@color/text_black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/me_uhfKeyCode_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="8.0dip"
+                        android:background="@drawable/border_grey_readonly"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:minWidth="30.0dip"
+                        android:paddingLeft="8.0dip"
+                        android:paddingRight="8.0dip"
+                        android:text=""
+                        android:textColor="@color/normal_text_color_grey"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="6.0dip"
+                    android:layout_marginRight="6.0dip"
+                    android:background="@color/title_bar_title_color_grey" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="9.0dip"
+                    android:layout_marginRight="9.0dip"
+                    android:gravity="left|top"
+                    android:lineSpacingExtra="3dip"
+                    android:minLines="1"
+                    android:paddingLeft="2dip"
+                    android:paddingTop="6dip"
+                    android:paddingRight="2dip"
+                    android:paddingBottom="6dip"
+                    android:text="用来设置UHF的开关按键，默认为红色扳机键，代码为307。可以根据工作需要来设置成其他按键。"
+                    android:textColor="@color/normal_text_color_grey"
+                    android:textColorHint="@color/text_hint"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10.0dip" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:background="@drawable/text_border_grey_white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="42.0dip"
+                    android:layout_margin="1.0dip"
+                    android:addStatesFromChildren="true"
+                    android:background="@drawable/me_item_bg_color_selector"
+                    android:padding="2.0dip"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/me_changePwd_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="8.0dip"
+                        android:layout_marginRight="8.0dip"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:text="@string/changePwd"
+                        android:textColor="@color/text_black"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/view_grey"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="42.0dip"
+                    android:layout_margin="1.0dip"
+                    android:addStatesFromChildren="true"
+                    android:background="@drawable/me_item_bg_color_selector"
+                    android:padding="2.0dip">
+
+                    <TextView
+                        android:id="@+id/me_clearCache_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="8.0dip"
+                        android:layout_marginRight="8.0dip"
+                        android:drawableRight="@drawable/right"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:text="@string/clearCache"
+                        android:textColor="@color/text_black"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/view_grey" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="42.0dip"
+                    android:layout_margin="1.0dip"
+                    android:addStatesFromChildren="true"
+                    android:background="@drawable/me_item_bg_color_selector"
+                    android:padding="2.0dip">
+
+                    <TextView
+                        android:id="@id/me_resetDb_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="8.0dip"
+                        android:layout_marginRight="8.0dip"
+                        android:drawableRight="@drawable/right"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:text="@string/resetDB"
+                        android:textColor="@color/text_black"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/view_grey" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="42.0dip"
+                    android:layout_margin="1.0dip"
+                    android:addStatesFromChildren="true"
+                    android:background="@drawable/me_item_bg_color_selector"
+                    android:padding="2.0dip">
+
+                    <TextView
+                        android:id="@id/me_serverAddr_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="8.0dip"
+                        android:layout_marginRight="8.0dip"
+                        android:drawableRight="@drawable/right"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:text="@string/setServer"
+                        android:textColor="@color/text_black"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10.0dip" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:background="@drawable/text_border_grey_white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="42.0dip"
+                    android:layout_margin="1.0dip"
+                    android:addStatesFromChildren="true"
+                    android:background="@drawable/me_item_bg_color_selector"
+                    android:padding="2.0dip">
+
+                    <TextView
+                        android:id="@+id/me_checkUpdate_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="8.0dip"
+                        android:layout_marginRight="8.0dip"
+                        android:drawableRight="@drawable/right"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:text="@string/checkUpdate"
+                        android:textColor="@color/text_black"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/view_grey" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="42.0dip"
+                    android:layout_margin="1.0dip"
+                    android:addStatesFromChildren="true"
+                    android:background="@drawable/me_item_bg_color_selector"
+                    android:padding="2.0dip">
+
+                    <TextView
+                        android:id="@+id/me_uploadTestData_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="8.0dip"
+                        android:layout_marginRight="8.0dip"
+                        android:drawableRight="@drawable/right"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:text="@string/uploadTestData"
+                        android:textColor="@color/text_black"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/view_grey" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="42.0dip"
+                    android:layout_margin="1.0dip"
+                    android:addStatesFromChildren="true"
+                    android:background="@drawable/me_item_bg_color_selector"
+                    android:padding="2.0dip">
+
+                    <TextView
+                        android:id="@+id/me_downloadOtherApp_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="8.0dip"
+                        android:layout_marginRight="8.0dip"
+                        android:drawableRight="@drawable/right"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:text="@string/downloadOtherApp"
+                        android:textColor="@color/text_black"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="@color/view_grey" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="42.0dip"
+                    android:layout_margin="1.0dip"
+                    android:addStatesFromChildren="true"
+                    android:background="@drawable/me_item_bg_color_selector"
+                    android:padding="2.0dip">
+
+                    <TextView
+                        android:id="@id/me_about_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="8.0dip"
+                        android:layout_marginRight="8.0dip"
+                        android:drawableRight="@drawable/right"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:text="@string/about"
+                        android:textColor="@color/text_black"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/me_logout_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="20.0dip" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_marginRight="10.0dip"
+                    android:background="@drawable/text_border_grey_white"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="42.0dip"
+                        android:layout_margin="1.0dip"
+                        android:addStatesFromChildren="true"
+                        android:background="@drawable/me_item_bg_color_selector"
+                        android:padding="2.0dip">
+
+                        <TextView
+                            android:id="@+id/me_logout_btn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:text="@string/logout_blank"
+                            android:textColor="@color/solid_red"
+                            android:textSize="16sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/me_login_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="20.0dip" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_marginRight="10.0dip"
+                    android:background="@drawable/text_border_grey_white"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="42.0dip"
+                        android:layout_margin="1.0dip"
+                        android:addStatesFromChildren="true"
+                        android:background="@drawable/me_item_bg_color_selector"
+                        android:padding="2.0dip">
+
+                        <TextView
+                            android:id="@+id/me_login_btn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:text="@string/login_blank"
+                            android:textColor="@color/solid_red"
+                            android:textSize="16sp" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="30.0dip" />
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        android:id="@id/navigation_layout"
+        layout="@layout/me_main_navigation_bar_x"
+        android:visibility="visible" />
+
+</LinearLayout>

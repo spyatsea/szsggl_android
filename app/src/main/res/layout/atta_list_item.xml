@@ -1,0 +1,110 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/infoLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:addStatesFromChildren="true"
+    android:background="@drawable/atta_item_bg_color_selector"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:addStatesFromChildren="true"
+        android:gravity="top|center_horizontal"
+        android:orientation="horizontal"
+        android:paddingLeft="3dip"
+        android:paddingTop="5dip"
+        android:paddingRight="3dip"
+        android:paddingBottom="5dip">
+
+        <ImageView
+            android:id="@+id/infoIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/transparent_pic"
+            android:clickable="false"
+            android:drawingCacheQuality="auto"
+            android:src="@drawable/document_image" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="2dp">
+
+            <LinearLayout
+                android:id="@+id/infoValueLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:gravity="left|center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/infoName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:gravity="left"
+                    android:text=""
+                    android:textColor="@color/text_blue"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/infoValueLayout"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="3dip"
+                android:gravity="left|center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/infoSize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:gravity="left"
+                    android:text=""
+                    android:textColor="@color/normal_text_color_grey"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/infoStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="3dp"
+                    android:gravity="left"
+                    android:text=""
+                    android:textColor="@color/ade_dark_green"
+                    android:textSize="13sp"/>
+
+                <ProgressBar
+                    android:id="@+id/infoStatusBar"
+                    android:layout_width="13dip"
+                    android:layout_height="13dip"
+                    android:indeterminate="true"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/splitterView"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/view_grey"
+        android:paddingLeft="2dip"
+        android:paddingRight="2dip"
+        android:visibility="gone" />
+
+</LinearLayout>

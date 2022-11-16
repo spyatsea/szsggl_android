@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/title_bar_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/title_bar_layout_height"
+    android:background="@drawable/navigation_bar_top" >
+
+    <Button
+        android:id="@id/backBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/title_back_btn"
+        android:contentDescription="@string/back"
+        android:gravity="center"
+        android:text="@null"
+        android:textSize="17.0sp" />
+
+    <TextView
+        android:id="@id/title_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/title_bar_button_width"
+        android:layout_marginRight="70.0dip"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="@string/record_blank"
+        android:textColor="@color/menusetting_title_text_color"
+        android:textSize="@dimen/news_detail_title_font_size" />
+
+
+</RelativeLayout>

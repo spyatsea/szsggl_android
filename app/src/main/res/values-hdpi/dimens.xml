@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dpi_type_hdpi">0dp</dimen>
+    <dimen name="login_app_margin_top">30.0dip</dimen>
+    <dimen name="login_app_download_qrcode_size">100.0dip</dimen>
+    <!-- project -->
+    <dimen name="gallery_thumbnail_width">280px</dimen>
+    <dimen name="gallery_thumbnail_height">210px</dimen>
+    <dimen name="nav_bar_btn_distance">1.0dip</dimen>
+    <dimen name="bottom_bar_button_height">35.0dip</dimen>
+    <dimen name="bottom_bar_button_font_size">17.0sp</dimen>
+</resources>

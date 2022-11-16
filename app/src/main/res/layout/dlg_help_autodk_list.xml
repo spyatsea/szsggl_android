@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/solid_plain"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:orientation="vertical"
+        android:paddingLeft="7dp"
+        android:paddingTop="7dp"
+        android:paddingRight="7dp"
+        android:paddingBottom="5dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dip"
+            android:lineSpacingExtra="1dip"
+            android:paddingTop="1dp"
+            android:paddingBottom="1dp"
+            android:text="1、请将PDA的发射面尽量对住UHF卡片方向；"
+            android:textColor="@color/text_black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dip"
+            android:lineSpacingExtra="1dip"
+            android:paddingTop="1dp"
+            android:paddingBottom="1dp"
+            android:text="2、如果感应到卡片（发出滴滴声），请按下红色开关执行快签；"
+            android:textColor="@color/text_black"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dip"
+            android:gravity="top|left"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="1dp"
+                android:lineSpacingExtra="1dip"
+                android:paddingBottom="1dp"
+                android:text="3、"
+                android:textColor="@color/text_black"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:contentDescription="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/table_icon_add_normal" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:lineSpacingExtra="1dip"
+                android:paddingTop="1dp"
+                android:paddingBottom="1dp"
+                android:text=" 按钮也可以执行快签。"
+                android:textColor="@color/text_black"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/info_tv1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dip"
+            android:lineSpacingExtra="1dip"
+            android:paddingTop="1dp"
+            android:paddingBottom="1dp"
+            android:text=""
+            android:textColor="@color/text_black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/info_tv2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dip"
+            android:lineSpacingExtra="1dip"
+            android:paddingTop="1dp"
+            android:paddingBottom="1dp"
+            android:text=""
+            android:textColor="@color/text_black"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+</ScrollView>

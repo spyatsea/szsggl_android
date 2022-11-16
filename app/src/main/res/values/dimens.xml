@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dpi_type">0dp</dimen>
+    <dimen name="login_app_margin_top">50.0dip</dimen>
+    <dimen name="title_bar_title_margin">10.0dip</dimen>
+    <dimen name="title_bar_tabStrip_layout_height">35.0dip</dimen>
+    <dimen name="title_bar_layout_height">45.0dip</dimen>
+    <dimen name="title_bar_button_width">46.0dip</dimen>
+    <dimen name="title_bar_back_button_width">44.0dip</dimen>
+    <dimen name="title_bar_search_layout_height">36.0dip</dimen>
+    <dimen name="app_title_font_size">21.0sp</dimen>
+    <dimen name="app_title_font_size_small">19.0sp</dimen>
+    <dimen name="app_title_font_size_small_btn">16.0sp</dimen>
+    <dimen name="app_title_font_size_smaller_x1">12.0sp</dimen>
+    <dimen name="app_title_font_size_smaller_x2">17.0sp</dimen>
+    <dimen name="app_title_font_size_smaller_x3">16.0sp</dimen>
+    <dimen name="app_bottom_prompt_size_small">17.0sp</dimen>
+    <dimen name="exam_time_size">28.0sp</dimen>
+    <dimen name="updatebar_icon_space">8.0dip</dimen>
+    <dimen name="pull_refresh_progress_size">32.0dip</dimen>
+    <dimen name="news_detail_title_font_size">18.0sp</dimen>
+    <dimen name="main_btn_inner_layout_padding">16.0sp</dimen>
+    <dimen name="login_app_download_qrcode_size">120.0dip</dimen>
+    <dimen name="capture_crop_width">200.0dip</dimen>
+    <dimen name="capture_crop_height">200.0dip</dimen>
+    <dimen name="main_grid_item_textSize">14sp</dimen>
+    <dimen name="main_grid_item_small_textSize">12sp</dimen>
+    <dimen name="bottom_bar_button_height">38.0dip</dimen>
+    <dimen name="bottom_bar_button_font_size">18.0sp</dimen>
+    <!-- ConnectDialog -->
+    <dimen name="connectDialog_text_size">20sp</dimen>
+    <!-- style -->
+    <dimen name="spinner_width_100">100dp</dimen>
+    <dimen name="spinner_height_50">50dp</dimen>
+    <dimen name="edit_width_100">100dp</dimen>
+    <dimen name="seekBar_width_210">210dp</dimen>
+    <dimen name="TextSize">16sp</dimen>
+    <dimen name="mainDialog_w">250dp</dimen>
+	<!-- project -->
+    <dimen name="gallery_thumbnail_width">280px</dimen>
+    <dimen name="gallery_thumbnail_height">210px</dimen>
+    <dimen name="nav_bar_btn_distance">1.0dip</dimen>
+    <dimen name="main_btn_text_size_big">18.0sp</dimen>
+    <dimen name="main_btn_text_size_normal">16.0sp</dimen>
+    <dimen name="main_btn_text_size_small">12.0sp</dimen>
+    <dimen name="main_btn_padding_top_big">12.0dip</dimen>
+    <dimen name="main_btn_padding_top_normal">18.0dip</dimen>
+    <dimen name="main_btn_p_margin_left_big">20.0dip</dimen>
+    <dimen name="main_btn_t_margin_right_big">60.0dip</dimen>
+    <dimen name="list_btn_text_size">14.0sp</dimen>
+    <dimen name="switch_btn_text_size">13.0sp</dimen>
+</resources>

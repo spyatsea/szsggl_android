@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/solid_plain"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@id/title_bar_layout"
+        layout="@layout/title_bar_normal" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/solid_plain"
+        android:fadingEdge="none"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/solid_plain"
+            android:gravity="center_horizontal|top"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="8dip"
+                android:paddingRight="8dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="标题："
+                    android:textColor="@color/solid_black"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/titleTv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dip"
+                android:layout_marginRight="8dip"
+                android:layout_marginTop="4dip"
+                android:background="@drawable/border_grey"
+                android:gravity="left|top"
+                android:hint="请输入标题"
+                android:inputType="text"
+                android:minLines="1"
+                android:padding="3dip"
+                android:text=""
+                android:textColor="@color/solid_black"
+                android:textColorHint="@color/text_hint"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="8dip"
+                android:paddingRight="8dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="留言者："
+                    android:textColor="@color/solid_black"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/userNameTv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dip"
+                android:layout_marginRight="8dip"
+                android:layout_marginTop="4dip"
+                android:background="@drawable/border_grey"
+                android:gravity="left|top"
+                android:hint="请输入姓名"
+                android:inputType="text"
+                android:minLines="1"
+                android:padding="3dip"
+                android:text=""
+                android:textColor="@color/solid_black"
+                android:textColorHint="@color/text_hint"
+                android:textSize="14sp"/>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="8dip"
+                android:paddingRight="8dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="手机号："
+                    android:textColor="@color/solid_black"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/telTv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dip"
+                android:layout_marginRight="8dip"
+                android:layout_marginTop="4dip"
+                android:background="@drawable/border_grey"
+                android:gravity="left|top"
+                android:hint="请输入手机号"
+                android:inputType="text"
+                android:minLines="1"
+                android:padding="3dip"
+                android:text=""
+                android:textColor="@color/solid_black"
+                android:textColorHint="@color/text_hint"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="8dip"
+                android:paddingRight="8dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="电子邮件："
+                    android:textColor="@color/solid_black"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/emailTv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dip"
+                android:layout_marginRight="8dip"
+                android:layout_marginTop="4dip"
+                android:background="@drawable/border_grey"
+                android:gravity="left|top"
+                android:hint="请输入电子邮件地址"
+                android:inputType="text"
+                android:minLines="1"
+                android:padding="3dip"
+                android:text=""
+                android:textColor="@color/solid_black"
+                android:textColorHint="@color/text_hint"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="8dip"
+                android:paddingRight="8dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="QQ："
+                    android:textColor="@color/solid_black"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/qqTv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dip"
+                android:layout_marginRight="8dip"
+                android:layout_marginTop="4dip"
+                android:background="@drawable/border_grey"
+                android:gravity="left|top"
+                android:hint="请输入QQ号"
+                android:inputType="text"
+                android:minLines="1"
+                android:padding="3dip"
+                android:text=""
+                android:textColor="@color/solid_black"
+                android:textColorHint="@color/text_hint"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="bottom"
+                android:orientation="horizontal"
+                android:paddingLeft="8dip"
+                android:paddingRight="8dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="照片："
+                    android:textColor="@color/solid_black"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/photoNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="@string/record_hintnum" />
+
+                <Button
+                    android:id="@+id/cameraBtn"
+                    android:layout_width="50sp"
+                    android:layout_height="29sp"
+                    android:layout_marginLeft="20dp"
+                    android:background="#007AFF"
+                    android:gravity="center"
+                    android:paddingBottom="2dip"
+                    android:paddingLeft="5dip"
+                    android:paddingRight="5dip"
+                    android:paddingTop="2dip"
+                    android:singleLine="true"
+                    android:text="@string/take_photo"
+                    android:textColor="@color/solid_plain"
+                    android:textSize="15sp"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/solid_plain"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="7dp" >
+
+                <Gallery
+                    android:id="@+id/photoGallery"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:minHeight="20dp"
+                    android:spacing="5dp"
+                    android:unselectedAlpha="0.3" />
+
+                <TextView
+                    android:id="@+id/photoDescTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@color/trans_orange_lighter"
+                    android:gravity="left"
+                    android:padding="3dp"
+                    android:textColor="@color/text_blue"
+                    android:textSize="14sp"
+                    android:visibility="invisible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="8dip"
+                android:paddingRight="8dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="留言内容："
+                    android:textColor="@color/solid_black"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/descriptionTv"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="3dip"
+                android:layout_marginLeft="8dip"
+                android:layout_marginRight="8dip"
+                android:layout_marginTop="3dip"
+                android:background="@drawable/border_grey"
+                android:gravity="left|top"
+                android:hint="请输入留言内容"
+                android:minLines="3"
+                android:padding="3dip"
+                android:text=""
+                android:textColor="@color/solid_black"
+                android:textColorHint="@color/text_hint"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@id/bottomBar"
+        android:layout_width="fill_parent"
+        android:layout_height="54dp"
+        android:layout_margin="0dp"
+        android:background="@drawable/navigation_bar_bottom"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:visibility="visible" >
+
+        <Button
+            android:id="@+id/submitBtn"
+            android:layout_width="150dp"
+            android:layout_height="38.0dip"
+            android:background="@drawable/custom_btn_card_blue"
+            android:gravity="center"
+            android:text="提　交"
+            android:textColor="@color/solid_plain"
+            android:textSize="18.0sp" />
+    </LinearLayout>
+
+</LinearLayout>

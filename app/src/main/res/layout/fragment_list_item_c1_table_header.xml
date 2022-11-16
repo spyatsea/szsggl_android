@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tableHeaderRowLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/solid_plain"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <View
+        android:id="@+id/splitterView_1"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/solid_plain"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/tableHeaderContentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+    <View
+        android:id="@+id/splitterView_2"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/solid_plain"
+        android:visibility="gone" />
+
+</LinearLayout>

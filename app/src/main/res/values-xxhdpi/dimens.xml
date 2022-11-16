@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dpi_type_xxhdpi">0dp</dimen>
+    <dimen name="login_app_margin_top">70.0dip</dimen>
+    <dimen name="login_app_download_qrcode_size">140.0dip</dimen>
+    <dimen name="capture_crop_width">300.0dip</dimen>
+	<dimen name="capture_crop_height">200.0dip</dimen>
+    <dimen name="app_bottom_prompt_size_small">17.0sp</dimen>
+    <!-- project -->
+    <dimen name="gallery_thumbnail_width">360px</dimen>
+    <dimen name="gallery_thumbnail_height">270px</dimen>
+    <dimen name="nav_bar_btn_distance">25.0dip</dimen>
+    <dimen name="list_btn_text_size">15.0sp</dimen>
+</resources>

@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/solid_plain"
+    android:orientation="vertical">
+
+    <include
+        android:id="@id/title_bar_layout"
+        layout="@layout/title_bar_normal_green_dark" />
+
+    <ScrollView
+        android:id="@+id/contentView"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/solid_plain"
+        android:fadingEdge="none"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/solid_plain"
+            android:gravity="center_horizontal|top"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="top"
+                android:orientation="horizontal"
+                android:paddingLeft="8dip"
+                android:paddingRight="8dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|top"
+                    android:singleLine="true"
+                    android:text="项目编号："
+                    android:textColor="@color/solid_black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/c1Tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left|top"
+                    android:minLines="1"
+                    android:text=""
+                    android:textColor="@color/normal_text_color_grey"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="top"
+                android:orientation="horizontal"
+                android:paddingLeft="8dip"
+                android:paddingRight="8dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|top"
+                    android:singleLine="true"
+                    android:text="项目名称："
+                    android:textColor="@color/solid_black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/infoTitleTv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left|top"
+                    android:minLines="1"
+                    android:text=""
+                    android:textColor="@color/normal_text_color_grey"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="top"
+                android:orientation="horizontal"
+                android:paddingLeft="8dip"
+                android:paddingRight="8dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|top"
+                    android:singleLine="true"
+                    android:text="责任部门："
+                    android:textColor="@color/solid_black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/c2Tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left|top"
+                    android:minLines="1"
+                    android:text=""
+                    android:textColor="@color/normal_text_color_grey"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="top"
+                android:orientation="horizontal"
+                android:paddingLeft="8dip"
+                android:paddingRight="8dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|top"
+                    android:singleLine="true"
+                    android:text="项目进度："
+                    android:textColor="@color/solid_black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/c3Tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left|top"
+                    android:minLines="1"
+                    android:text=""
+                    android:textColor="@color/normal_text_color_grey"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="top"
+                android:orientation="horizontal"
+                android:paddingLeft="8dip"
+                android:paddingRight="8dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|top"
+                    android:singleLine="true"
+                    android:text="项目状态："
+                    android:textColor="@color/solid_black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/c4Tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left|top"
+                    android:minLines="1"
+                    android:text=""
+                    android:textColor="@color/normal_text_color_grey"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="top"
+                android:orientation="horizontal"
+                android:paddingLeft="8dip"
+                android:paddingRight="8dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|top"
+                    android:singleLine="true"
+                    android:text="计划时间："
+                    android:textColor="@color/solid_black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/c5Tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="left|top"
+                    android:minLines="1"
+                    android:text=""
+                    android:textColor="@color/normal_text_color_grey"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/table_border_color"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/info_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/custom_btn_card_blue"
+                android:gravity="left|center_vertical"
+                android:minHeight="38.0dip"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="项目基本信息"
+                android:textColor="@color/solid_plain"
+                android:textSize="@dimen/list_btn_text_size"
+                android:textStyle="normal" />
+
+            <Button
+                android:id="@+id/rec_list_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/custom_btn_card_green"
+                android:gravity="left|center_vertical"
+                android:minHeight="38.0dip"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="项目记录列表"
+                android:textColor="@color/solid_plain"
+                android:textSize="@dimen/list_btn_text_size"
+                android:textStyle="normal" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/table_border_color"
+                android:visibility="visible" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="5dp"
+                android:paddingTop="1dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="1dp"
+                android:singleLine="false"
+                android:text="按项目执行阶段划分："
+                android:textColor="@color/text_blue_dark"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:id="@+id/stageListLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dip"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="8dip"
+                android:background="@drawable/border_blue_grey"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:orientation="vertical"
+                android:paddingBottom="12dp"></LinearLayout>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="5dp"
+                android:paddingTop="1dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="1dp"
+                android:singleLine="false"
+                android:text="按项目记录分类划分："
+                android:textColor="#AA004D40"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:id="@+id/catListLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dip"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="8dip"
+                android:background="@drawable/border_green_grey"
+                android:gravity="center"
+                android:minHeight="30dp"
+                android:orientation="vertical"
+                android:paddingBottom="12dp"></LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@color/solid_plain"
+                android:visibility="visible" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@id/bottomBar"
+        android:layout_width="fill_parent"
+        android:layout_height="54dp"
+        android:layout_margin="0dp"
+        android:background="@drawable/navigation_bar_bottom"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:visibility="visible">
+
+        <Button
+            android:id="@+id/goBackBtn"
+            android:layout_width="110dp"
+            android:layout_height="38.0dip"
+            android:background="@drawable/custom_btn_card_blue"
+            android:gravity="center"
+            android:text="返　回"
+            android:textColor="@color/solid_plain"
+            android:textSize="18.0sp" />
+
+        <Button
+            android:id="@+id/addBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="38.0dip"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/custom_btn_card_purple"
+            android:gravity="center"
+            android:paddingLeft="15dip"
+            android:paddingRight="15dip"
+            android:text="新建项目记录"
+            android:textColor="@color/solid_plain"
+            android:textSize="18.0sp" />
+    </LinearLayout>
+
+</LinearLayout>

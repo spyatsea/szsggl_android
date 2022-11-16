@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/navigation_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="54.0dip"
+    android:background="@drawable/nav_bar_bg_blue"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:id="@id/navigation_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="54.0dip"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:id="@+id/nav_main_layout"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:addStatesFromChildren="true"
+            android:gravity="center_vertical|right"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/nav_bar_btn_distance" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/transparent_pic"
+                android:drawingCacheQuality="auto"
+                android:src="@drawable/home_tab_left_selector" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nav_btn_main"
+                android:textColor="@drawable/nav_bar_text_color_selector"
+                android:textSize="@dimen/app_title_font_size_small_btn" />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/nav_btn_center" />
+
+        <LinearLayout
+            android:id="@+id/nav_config_layout"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:addStatesFromChildren="true"
+            android:gravity="center_vertical|left"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/nav_bar_btn_distance" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/transparent_pic"
+                android:drawingCacheQuality="auto"
+                android:src="@drawable/home_tab_right_selector" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/config"
+                android:textColor="@color/text_color_yellow"
+                android:textSize="@dimen/app_title_font_size_small_btn" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

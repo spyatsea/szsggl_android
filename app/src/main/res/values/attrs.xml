@@ -1,0 +1,11 @@
+<resources>
+    <declare-styleable name="Gallery">
+        <attr name="android:galleryItemBackground" />
+    </declare-styleable>
+    <declare-styleable name="News">
+        <attr name="id" format="string" />
+    </declare-styleable>
+    <declare-styleable name="Message">
+        <attr name="msg_id" format="string" />
+    </declare-styleable>
+</resources>

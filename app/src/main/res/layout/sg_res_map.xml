@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/solid_plain"
+    android:orientation="vertical">
+
+    <include
+        android:id="@id/title_bar_layout"
+        layout="@layout/title_bar_sgres_map" />
+
+    <LinearLayout
+        android:id="@+id/listTitleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/exercise_bg_c_1"
+        android:gravity="left"
+        android:orientation="vertical"
+        android:paddingBottom="3dp"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:addStatesFromChildren="true"
+            android:gravity="left|top"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:paddingTop="3dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="3dp">
+
+            <TextView
+                android:id="@id/titleTv"
+                style="@style/loginTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/transparent_pic"
+                android:clickable="true"
+                android:hint="请在地图上选择坐标点…"
+                android:minLines="1"
+                android:singleLine="false"
+                android:text=""
+                android:textColor="@drawable/text_map_title_color_selector"
+                android:textColorHint="@color/text_hint"
+                android:textSize="@dimen/app_title_font_size_small" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|top"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:paddingTop="1dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="1dp">
+
+            <TextView
+                style="@style/loginTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minLines="1"
+                android:singleLine="false"
+                android:text="经纬度："
+                android:textColor="@color/trans_black"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/lngLatTv"
+                style="@style/loginTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minLines="1"
+                android:singleLine="false"
+                android:text="－－"
+                android:textColor="@color/text_blue"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|top"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:paddingTop="1dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="1dp">
+
+            <TextView
+                style="@style/loginTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minLines="1"
+                android:singleLine="false"
+                android:text="分　组："
+                android:textColor="@color/trans_black"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/groupTv"
+                style="@style/loginTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minLines="1"
+                android:singleLine="false"
+                android:text="－－"
+                android:textColor="@color/text_blue"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/bdMapView"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clickable="true" />
+
+    <LinearLayout
+        android:id="@id/bottomBar"
+        android:layout_width="fill_parent"
+        android:layout_height="54dp"
+        android:layout_margin="0dp"
+        android:background="@drawable/navigation_bar_bottom"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:visibility="visible">
+
+        <Button
+            android:id="@+id/goBackBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/bottom_bar_button_height"
+            android:background="@drawable/custom_btn_card_blue"
+            android:gravity="center"
+            android:text="返　回"
+            android:textColor="@color/solid_plain"
+            android:textSize="@dimen/bottom_bar_button_font_size" />
+
+        <Button
+            android:id="@+id/groupBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/bottom_bar_button_height"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/custom_btn_card_green"
+            android:gravity="center"
+            android:text="分　组"
+            android:textColor="@color/solid_plain"
+            android:textSize="@dimen/bottom_bar_button_font_size" />
+
+        <Button
+            android:id="@+id/infoListBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/bottom_bar_button_height"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/custom_btn_card_purple"
+            android:gravity="center"
+            android:text="信息列表"
+            android:textColor="@color/solid_plain"
+            android:textSize="@dimen/bottom_bar_button_font_size" />
+
+    </LinearLayout>
+</LinearLayout>

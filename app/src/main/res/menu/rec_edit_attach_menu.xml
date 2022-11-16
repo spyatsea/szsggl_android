@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/menu_atta_detail"
+        android:icon="@drawable/menu_document_info"
+        android:title="@string/attachment_detail"/>
+    <item
+        android:id="@+id/menu_edit_atta_name"
+        android:icon="@drawable/menu_comment_edit"
+        android:title="@string/attachment_name_edit"/>
+    <item
+        android:id="@+id/menu_delete"
+        android:icon="@drawable/menu_cross"
+        android:title="@string/delete"/>
+
+</menu>

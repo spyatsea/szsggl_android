@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list android:oneshot="false"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="100" android:drawable="@drawable/rotating_99" />
+    <item android:duration="100" android:drawable="@drawable/rotating_portrait_00" />
+    <item android:duration="500" android:drawable="@drawable/rotating_portrait_01" />
+    <item android:duration="100" android:drawable="@drawable/rotating_portrait_02" />
+    <item android:duration="200" android:drawable="@drawable/rotating_portrait_03" />
+    <item android:duration="400" android:drawable="@drawable/rotating_portrait_01" />
+    <item android:duration="100" android:drawable="@drawable/rotating_portrait_02" />
+    <item android:duration="200" android:drawable="@drawable/rotating_portrait_03" />
+    <item android:duration="300" android:drawable="@drawable/rotating_portrait_01" />
+    <item android:duration="100" android:drawable="@drawable/rotating_portrait_04" />
+    <item android:duration="200" android:drawable="@drawable/rotating_portrait_05" />
+    <item android:duration="100" android:drawable="@drawable/rotating_portrait_06" />
+    <item android:duration="600" android:drawable="@drawable/rotating_portrait_07" />
+    <item android:duration="100" android:drawable="@drawable/rotating_portrait_08" />
+    <item android:duration="100" android:drawable="@drawable/rotating_99" />
+</animation-list>

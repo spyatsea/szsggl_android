@@ -1,0 +1,276 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/solid_plain"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="3dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="top|right"
+                android:text="分组名称："
+                android:textColor="@color/solid_black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/group_title_tv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="top|left"
+                android:textColor="@color/text_blue"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="3dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="top|right"
+                android:text="备　　注："
+                android:textColor="@color/solid_black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/group_memo_tv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="top|left"
+                android:textColor="@color/text_blue"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="3dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="top|right"
+                android:text="连接方式："
+                android:textColor="@color/solid_black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/group_ot_tv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="top|left"
+                android:textColor="@color/text_blue"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="3dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="top|right"
+                android:text="坐标图片："
+                android:textColor="@color/solid_black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/group_icon_tv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="top|left"
+                android:text=""
+                android:textColor="@color/text_blue"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/group_stroke_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="3dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="top|right"
+                android:text="连线颜色："
+                android:textColor="@color/solid_black"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="3.0dip"
+                android:background="@drawable/border_color_pad"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="2px">
+
+                <TextView
+                    android:id="@+id/group_stroke_color_pad_tv"
+                    android:layout_width="16.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@color/solid_plain"
+                    android:text="　"
+                    android:textColor="@color/text_blue"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/group_stroke_color_tv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:gravity="top|left"
+                android:textColor="@color/text_blue"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="top|right"
+                android:text="宽度："
+                android:textColor="@color/solid_black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/group_stroke_weight_tv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="top|left"
+                android:textColor="@color/text_blue"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="top|right"
+                android:text="透明度："
+                android:textColor="@color/solid_black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/group_stroke_opacity_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="top|left"
+                android:textColor="@color/text_blue"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/group_fill_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="3dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="top|right"
+                android:text="填充颜色："
+                android:textColor="@color/solid_black"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="3.0dip"
+                android:background="@drawable/border_color_pad"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="2px">
+
+                <TextView
+                    android:id="@+id/group_fill_color_pad_tv"
+                    android:layout_width="16.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@color/solid_plain"
+                    android:text="　"
+                    android:textColor="@color/text_blue"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/group_fill_color_tv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:gravity="top|left"
+                android:textColor="@color/text_blue"
+                android:textSize="14sp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="top|right"
+                android:text="宽度："
+                android:textColor="@color/solid_black"
+                android:textSize="14sp"
+                android:visibility="invisible" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="top|left"
+                android:textColor="@color/text_blue"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="top|right"
+                android:text="透明度："
+                android:textColor="@color/solid_black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/group_fill_opacity_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="top|left"
+                android:textColor="@color/text_blue"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
