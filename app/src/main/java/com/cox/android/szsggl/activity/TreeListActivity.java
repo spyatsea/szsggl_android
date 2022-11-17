@@ -595,15 +595,15 @@ public class TreeListActivity extends DbActivity {
      * @return {@code ArrayList<HashMap<String, Object>>} 数据
      */
     private ArrayList<HashMap<String, Object>> getTreeData_dept() {
-        // 这里将偏关分公司的编号做为ROOT
+        // 这里将朔州分公司的编号做为ROOT
         ArrayList<HashMap<String, Object>> list = (ArrayList<HashMap<String, Object>>) infoTool
                 .getInfoMapList(
                         "SELECT model.ids id, model.title t, model.pids p FROM t_base_deptinfo model WHERE model.valid='1' AND model.ids<>? AND INSTR(model.fldh, ?)=1 ORDER BY model.pxbh ASC",
-                        new String[]{"2aa2dc3166c140f3943c2708c84ae498", "{DEPTROOT}{x0000000000000000000000000000001}{2aa2dc3166c140f3943c2708c84ae498}"});
+                        new String[]{"0e98f3b0da394452b2a4938a8a2dc147", "{DEPTROOT}{x0000000000000000000000000000001}{0e98f3b0da394452b2a4938a8a2dc147}"});
         // 重新设置根信息编号
         for (HashMap<String, Object> o : list) {
             String pid = (String) o.get("p");
-            if ("2aa2dc3166c140f3943c2708c84ae498".equals(pid)) {
+            if ("0e98f3b0da394452b2a4938a8a2dc147".equals(pid)) {
                 o.put("p", "ROOT");
             }
         }

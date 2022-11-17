@@ -3,8 +3,8 @@
 
     <string name="dpi_type"></string>
     <string name="app_name">水工管理</string>
-    <string name="app_name_display">山西万家寨水控水资源有限公司水工管理系统移动终端</string>
-    <string name="app_name_display_format">山西万家寨水控水资源有限公司\n水工管理系统移动终端</string>
+    <string name="app_name_display">山西万家寨水控水资源有限公司朔州分公司水工管理系统移动终端</string>
+    <string name="app_name_display_format">山西万家寨水控水资源有限公司朔州分公司\n水工管理系统移动终端</string>
     <string name="app_name_display_short">水工管理系统</string>
     <string name="app_name_sub"></string>
     <string name="app_name_en"></string>

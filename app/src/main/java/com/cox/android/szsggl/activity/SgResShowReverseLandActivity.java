@@ -537,7 +537,7 @@ public class SgResShowReverseLandActivity extends DbActivity {
 
             // 定位方式
             loctypeName = infoTool.getSingleVal("SELECT model.zdname FROM t_base_code model WHERE model.valid='1' and model.type=? and model.zdcode=?",
-                    new String[]{"偏关分公司_水工资源定位方式", (String) infoObj.get("loctype")});
+                    new String[]{"朔州分公司_水工资源定位方式", (String) infoObj.get("loctype")});
 
 
             String dataStr;

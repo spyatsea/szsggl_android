@@ -676,7 +676,7 @@ public class MainActivity extends DbActivity {
 
                     // 更新其他信息。开始==================================================================
                     String ins_distance_str = infoTool.getSingleVal(
-                            "select model.zdname from t_base_code model where model.valid='1' and model.type='偏关分公司_水工巡视参数' and model.zdcode='水工巡视定位有效距离'",
+                            "select model.zdname from t_base_code model where model.valid='1' and model.type='朔州分公司_水工巡视参数' and model.zdcode='水工巡视定位有效距离'",
                             new String[]{});
                     if (CommonUtil.checkNB(ins_distance_str)) {
                         int ins_distance = -1;
@@ -1216,7 +1216,7 @@ public class MainActivity extends DbActivity {
 
                     // 更新其他信息。开始==================================================================
                     String ins_distance_str = infoTool.getSingleVal(
-                            "select model.zdname from t_base_code model where model.valid='1' and model.type='偏关分公司_水工巡视参数' and model.zdcode='水工巡视定位有效距离'",
+                            "select model.zdname from t_base_code model where model.valid='1' and model.type='朔州分公司_水工巡视参数' and model.zdcode='水工巡视定位有效距离'",
                             new String[]{});
                     if (CommonUtil.checkNB(ins_distance_str)) {
                         int ins_distance = -1;
