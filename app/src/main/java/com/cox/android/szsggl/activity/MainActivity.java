@@ -738,6 +738,7 @@ public class MainActivity extends DbActivity {
         protected void onPostExecute(String result) {
             if (CommonParam.RESULT_SUCCESS.equals(result)) {
                 show(R.string.alert_data_sync_success);
+                Log.d("##1", "###");
             } else if (CommonParam.RESULT_LOGIN.equals(result)) {
                 dataSyncDlg.setProgress(0);
                 dataSyncDlg.dismiss();

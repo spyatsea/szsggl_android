@@ -1200,7 +1200,7 @@ public class DbActivity extends AppCompatActivity {
      */
     public void show(String text) {
         Toast toast = Toast.makeText(this, text, Toast.LENGTH_SHORT);
-        toast.setGravity(Gravity.CENTER, 0, 0);
+        // toast.setGravity(Gravity.CENTER, 0, 0);
         toast.show();
     }
 
@@ -1221,7 +1221,7 @@ public class DbActivity extends AppCompatActivity {
      */
     public void show(String text, int duration) {
         Toast toast = Toast.makeText(this, text, duration);
-        toast.setGravity(Gravity.CENTER, 0, 0);
+        // toast.setGravity(Gravity.CENTER, 0, 0);
         toast.show();
     }
 
@@ -4714,7 +4714,7 @@ public class DbActivity extends AppCompatActivity {
         /**
          * FTP常量：密码
          */
-        public static final String FTP_PASSWORD = "isdn1603";
+        public static final String FTP_PASSWORD = "Isdn1603!@#";
         /**
          * FTP常量：端口
          */

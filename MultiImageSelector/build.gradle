@@ -2,8 +2,8 @@ apply plugin: 'com.android.library'
 
 android {
     namespace 'me.nereo.multi_image_selector'
+    compileSdk 32
 
-    compileSdkVersion 31
     useLibrary 'org.apache.http.legacy'
 
     defaultConfig {

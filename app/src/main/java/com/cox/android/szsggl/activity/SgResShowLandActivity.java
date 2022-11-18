@@ -639,7 +639,7 @@ public class SgResShowLandActivity extends DbActivity {
 //
 //                if (!attaFile.exists()) {
 //                    Map<String, Object> downloadResult = downloadFile("http://" + baseApp.serverAddr
-//                            + "/UploadFiles/SgResAtta/" + _file, attaFile.getAbsolutePath(), null);
+//                            + "/UploadFiles/SzSgResAtta/" + _file, attaFile.getAbsolutePath(), null);
 //                }
 //            }
             // 下载附件。结束================================================================
@@ -1526,7 +1526,7 @@ public class SgResShowLandActivity extends DbActivity {
                     // 连接超时（毫秒）
                     int connectTimeout = 3000;
                     // 下载文件名
-                    String urlString = "http://" + baseApp.serverAddr + "/UploadFiles/SgResAtta/" + remoteFileName;
+                    String urlString = "http://" + baseApp.serverAddr + "/UploadFiles/SzSgResAtta/" + remoteFileName;
 
                     try {
                         URL url = new URL(urlString);
@@ -1576,7 +1576,7 @@ public class SgResShowLandActivity extends DbActivity {
                 }
                 // 下载文件。结束===============================================
 //                Map<String, Object> downloadResult = downloadFile("http://" + baseApp.serverAddr
-//                        + "/UploadFiles/SgResAtta/" + remoteFileName, attaFile.getAbsolutePath(), null, needShowNetAlert);
+//                        + "/UploadFiles/SzSgResAtta/" + remoteFileName, attaFile.getAbsolutePath(), null, needShowNetAlert);
 //                result = (String) downloadResult.get("result");
             }
             // 处理数据。结束============================================================================

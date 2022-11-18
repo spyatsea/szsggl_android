@@ -8,9 +8,9 @@
     <string name="app_name_display_short">水工管理系统</string>
     <string name="app_name_sub"></string>
     <string name="app_name_en"></string>
-    <string name="app_versionCode">115</string>
-    <string name="app_versionName">1.1.5</string>
-    <string name="app_versionBuild">20220927</string>
+    <string name="app_versionCode">1</string>
+    <string name="app_versionName">0.0.1</string>
+    <string name="app_versionBuild">20221117</string>
     <string name="app_dept">山西万家寨水控水资源有限公司</string>
     <string name="app_producter">山西万家寨水控水资源有限公司</string>
     <string name="spliter"> · </string>
@@ -473,6 +473,7 @@
     <string name="ic_folder">&#xe09d;</string>
     <string name="ic_keyboard_arrow_down">&#xe0c5;</string>
     <string name="ic_keyboard_arrow_right">&#xe0c7;</string>
+    <string name="ic_doc">&#xe077;</string>
     <!--CustomizeFont-->
     <string name="mui_icon_help">&#xe505;</string>
     <!--UHF-->

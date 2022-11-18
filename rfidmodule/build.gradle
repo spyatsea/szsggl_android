@@ -4,8 +4,8 @@ plugins {
 
 android {
     namespace 'com.example.rfidmodule'
+    compileSdk 32
 
-    compileSdkVersion 31
 
     defaultConfig {
         minSdkVersion 21

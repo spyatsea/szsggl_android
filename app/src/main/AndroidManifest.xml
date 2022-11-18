@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     android:installLocation="auto"
-    android:versionCode="115"
-    android:versionName="1.1.5" >
+    android:versionCode="1"
+    android:versionName="0.0.1" >
 
     <supports-screens
         android:anyDensity="true"
@@ -86,12 +86,12 @@
 
         <!-- 百度开发者中心应用的API Key，同时也是百度地图授权Key -->
         <!-- 打包key -->
-        <!-- OtmHdoY3NQqWio5UXRsdTABN5NIRY3g2 -->
+        <!-- Ut9Fv6CjW0DNoOWSyCsxVfADCyHlMjG3 -->
         <!-- 测试key -->
-        <!-- OtmHdoY3NQqWio5UXRsdTABN5NIRY3g2 -->
+        <!-- Ut9Fv6CjW0DNoOWSyCsxVfADCyHlMjG3 -->
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
-            android:value="OtmHdoY3NQqWio5UXRsdTABN5NIRY3g2" />
+            android:value="Ut9Fv6CjW0DNoOWSyCsxVfADCyHlMjG3" />
 
         <activity
             android:name=".activity.SplashBeforeActivity"

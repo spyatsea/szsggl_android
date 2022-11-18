@@ -62,6 +62,7 @@ public class IconTreeItemHolder extends TreeNode.BaseNodeViewHolder<IconTreeItem
 
     public static class IconTreeItem {
         public int icon;
+        public int icon_leaf;
         public String text;
         public String id;
 
@@ -73,6 +74,13 @@ public class IconTreeItemHolder extends TreeNode.BaseNodeViewHolder<IconTreeItem
 
         public IconTreeItem(int icon, String text, String id) {
             this.icon = icon;
+            this.text = text;
+            this.id = id;
+        }
+
+        public IconTreeItem(int icon, int icon_leaf, String text, String id) {
+            this.icon = icon;
+            this.icon_leaf = icon_leaf;
             this.text = text;
             this.id = id;
         }

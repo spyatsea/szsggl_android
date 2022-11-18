@@ -19,9 +19,11 @@ public class ArrowExpandSelectableHeaderHolder extends TreeNode.BaseNodeViewHold
     private TextView tvValue;
     private PrintView arrowView;
     private CheckBox nodeSelector;
+    Context context;
 
     public ArrowExpandSelectableHeaderHolder(Context context) {
         super(context);
+        this.context = context;
     }
 
     @Override
@@ -36,22 +38,33 @@ public class ArrowExpandSelectableHeaderHolder extends TreeNode.BaseNodeViewHold
                     View arrow_layout = v;//node.getViewHolder().getView().findViewById(R.id.arrow_layout);
                     PrintView iconView = (PrintView) arrow_layout.findViewById(R.id.icon);
                     activity.selectedNode.setSelected(false);
-                    activity.selectedNode = null;
 
-                    iconView.setIconText(context.getResources().getString(value.icon));
-                    iconView.setIconColor(R.color.background_yellow);
+                    if (node.isLeaf()) {
+                        iconView.setIconText(context.getResources().getString(value.icon_leaf));
+                    } else {
+                        iconView.setIconText(context.getResources().getString(value.icon));
+                    }
+                    iconView.setIconColor(context.getResources().getColor(R.color.tree_text_color));
                     v.setBackgroundResource(R.drawable.color_grey_selector);
+
+                    activity.selectedNode = null;
                 } else {
                     TreeListActivity activity = (TreeListActivity) context;
                     View arrow_layout = null;
                     PrintView iconView = null;
                     if (activity.selectedNode != null) {
-                        activity.selectedNode.setSelected(false);
                         arrow_layout = activity.selectedNode.getViewHolder().getView().findViewById(R.id.arrow_layout);
                         iconView = (PrintView) arrow_layout.findViewById(R.id.icon);
+
+                        if (activity.selectedNode.isLeaf()) {
+                            iconView.setIconText(context.getResources().getString(value.icon_leaf));
+                        } else {
+                            iconView.setIconText(context.getResources().getString(value.icon));
+                        }
+                        iconView.setIconColor(context.getResources().getColor(R.color.tree_text_color));
                         arrow_layout.setBackgroundResource(R.drawable.color_grey_selector);
-                        iconView.setIconText(context.getResources().getString(value.icon));
-                        iconView.setIconColor(R.color.background_yellow);
+
+                        activity.selectedNode.setSelected(false);
                         activity.selectedNode = null;
                     }
 
@@ -60,7 +73,7 @@ public class ArrowExpandSelectableHeaderHolder extends TreeNode.BaseNodeViewHold
                     arrow_layout = v;//activity.selectedNode.getViewHolder().getView().findViewById(R.id.arrow_layout);
                     iconView = (PrintView) arrow_layout.findViewById(R.id.icon);
                     iconView.setIconText(context.getResources().getString(R.string.ic_check_circle));
-                    iconView.setIconColor(R.color.text_color_orange_1);
+                    iconView.setIconColor(context.getResources().getColor(R.color.text_color_orange_1));
                     v.setBackgroundResource(R.drawable.border_yellow);
                 }
             }
@@ -79,14 +92,17 @@ public class ArrowExpandSelectableHeaderHolder extends TreeNode.BaseNodeViewHold
 //        });
 
         final PrintView iconView = (PrintView) view.findViewById(R.id.icon);
-        iconView.setIconText(context.getResources().getString(value.icon));
-        iconView.setIconColor(R.color.background_yellow);
+        iconView.setIconColor(context.getResources().getColor(R.color.tree_text_color));
+        if (node.isLeaf()) {
+            iconView.setIconText(context.getResources().getString(value.icon_leaf));
+        } else {
+            iconView.setIconText(context.getResources().getString(value.icon));
+        }
 
         arrowView = (PrintView) view.findViewById(R.id.arrow_icon);
         arrowView.setPadding(20, 10, 10, 10);
         if (node.isLeaf()) {
-            //arrowView.setVisibility(View.GONE);
-            arrowView.setIconColor(R.color.transparent);
+            arrowView.setIconColor(context.getResources().getColor(R.color.transparent));
         }
         arrowView.setOnClickListener(new View.OnClickListener() {
             @Override

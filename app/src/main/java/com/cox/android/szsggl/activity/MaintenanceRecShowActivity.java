@@ -516,7 +516,7 @@ public class MaintenanceRecShowActivity extends DbActivity {
 //
 //                if (!attaFile.exists()) {
 //                    Map<String, Object> downloadResult = downloadFile("http://" + baseApp.serverAddr
-//                            + "/UploadFiles/SgBizAtta/" + _file, attaFile.getAbsolutePath(), null);
+//                            + "/UploadFiles/SzSgBizAtta/" + _file, attaFile.getAbsolutePath(), null);
 //                }
 //            }
             // 下载附件。结束================================================================
@@ -967,7 +967,7 @@ public class MaintenanceRecShowActivity extends DbActivity {
                     // 连接超时（毫秒）
                     int connectTimeout = 3000;
                     // 下载文件名
-                    String urlString = "http://" + baseApp.serverAddr + "/UploadFiles/SgBizAtta/" + remoteFileName;
+                    String urlString = "http://" + baseApp.serverAddr + "/UploadFiles/SzSgBizAtta/" + remoteFileName;
 
                     try {
                         URL url = new URL(urlString);
@@ -1017,7 +1017,7 @@ public class MaintenanceRecShowActivity extends DbActivity {
                 }
                 // 下载文件。结束===============================================
 //                Map<String, Object> downloadResult = downloadFile("http://" + baseApp.serverAddr
-//                        + "/UploadFiles/SgBizAtta/" + remoteFileName, attaFile.getAbsolutePath(), null, needShowNetAlert);
+//                        + "/UploadFiles/SzSgBizAtta/" + remoteFileName, attaFile.getAbsolutePath(), null, needShowNetAlert);
 //                result = (String) downloadResult.get("result");
             }
             // 处理数据。结束============================================================================

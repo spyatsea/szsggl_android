@@ -2,8 +2,8 @@ apply plugin: 'com.android.library'
 
 android {
     namespace 'cn.hzw.doodle'
+    compileSdk 32
 
-    compileSdkVersion 31
 
     defaultConfig {
         minSdkVersion 21

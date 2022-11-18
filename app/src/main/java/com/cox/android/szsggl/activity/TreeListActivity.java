@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020 乔勇(Jacky Qiao) 版权所有
+ * Copyright (c) 2022 乔勇(Jacky Qiao) 版权所有
  */
 package com.cox.android.szsggl.activity;
 
@@ -187,7 +187,7 @@ public class TreeListActivity extends DbActivity {
                     PrintView iconView = (PrintView) arrow_layout.findViewById(R.id.icon);
                     arrow_layout.setBackgroundResource(R.drawable.color_grey_selector);
                     iconView.setIconText(getResources().getString(((IconTreeItemHolder.IconTreeItem) selectedNode.getValue()).icon));
-                    iconView.setIconColor(R.color.background_yellow);
+                    // iconView.setIconColor(getResources().getColor(R.color.background_yellow));
                     selectedNode = null;
                 }
             }
@@ -375,7 +375,7 @@ public class TreeListActivity extends DbActivity {
                 if (selectedNode != null) {
                     TreeNode pNode = selectedNode;
                     while (!pNode.isRoot()) {
-                        Log.d("##p", "" + ((IconTreeItemHolder.IconTreeItem) pNode.getValue()).id);
+                        // Log.d("##p", "" + ((IconTreeItemHolder.IconTreeItem) pNode.getValue()).id);
                         pNode = pNode.getParent();
                         treeView.expandNode(pNode);
                     }
@@ -432,14 +432,14 @@ public class TreeListActivity extends DbActivity {
      * @param list {@code ArrayList<HashMap<String, Object>>} 节点数据
      */
     private void processNode(TreeNode root, ArrayList<HashMap<String, Object>> list) {
-        Log.d("####processNode", "=======");
+        // Log.d("####processNode", "=======");
         // 是否需要预先选中值
         boolean needPreSelectFlag = false;
         String pre_id = null;
         if (searchV != null) {
             needPreSelectFlag = true;
             pre_id = CommonUtil.N2B((String) searchV.get("id"));
-            Log.d("#v", JSONObject.toJSONString(searchV));
+            // Log.d("#v", JSONObject.toJSONString(searchV));
         }
         HashMap<String, TreeNode> map = new HashMap<String, TreeNode>();
         for (int i = 0, len = list.size(); i < len; i++) {
@@ -447,7 +447,7 @@ public class TreeListActivity extends DbActivity {
             String id = (String) o.get("id");
             String pid = (String) o.get("p");
             String title = (String) o.get("t");
-            TreeNode node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_folder, title, id)).setViewHolder(new ArrowExpandSelectableHeaderHolder(classThis));
+            TreeNode node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_folder, R.string.ic_doc, title, id)).setViewHolder(new ArrowExpandSelectableHeaderHolder(classThis));
             map.put(id, node);
 
             if ("ROOT".equals(pid)) {
@@ -461,7 +461,7 @@ public class TreeListActivity extends DbActivity {
                 View arrow_layout = selectedNode.getViewHolder().getView().findViewById(R.id.arrow_layout);
                 PrintView iconView = (PrintView) arrow_layout.findViewById(R.id.icon);
                 iconView.setIconText(getResources().getString(R.string.ic_check_circle));
-                iconView.setIconColor(R.color.text_color_orange_1);
+                iconView.setIconColor(getResources().getColor(R.color.text_color_orange_1));
                 arrow_layout.setBackgroundResource(R.drawable.border_yellow);
             }
         }
@@ -470,61 +470,6 @@ public class TreeListActivity extends DbActivity {
             HashMap<String, Object> o = list.get(i);
             String id = (String) o.get("id");
             String pid = (String) o.get("p");
-
-            TreeNode node = map.get(id);
-            TreeNode pNode = map.get(pid);
-            if (pNode != null) {
-                pNode.addChild(node);
-            }
-        }
-    }
-
-    /**
-     * 生成节点
-     *
-     * @param root {@code TreeNode} 根节点
-     * @param s    {@code s} 节点数据
-     */
-    private void processNode_s(TreeNode root, String s) {
-        Log.d("####processNode_s", "=======");
-        // 是否需要预先选中值
-        boolean needPreSelectFlag = false;
-        String pre_id = null;
-        if (searchV != null) {
-            needPreSelectFlag = true;
-            pre_id = CommonUtil.N2B((String) searchV.get("id"));
-            Log.d("#v", JSONObject.toJSONString(searchV));
-        }
-        JSONArray array = JSONArray.parseArray(s);
-        HashMap<String, TreeNode> map = new HashMap<String, TreeNode>();
-        for (int i = 0, len = array.size(); i < len; i++) {
-            JSONObject o = array.getJSONObject(i);
-            String id = o.getString("id");
-            String pid = o.getString("p");
-            String title = o.getString("t");
-            TreeNode node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_folder, title, id)).setViewHolder(new ArrowExpandSelectableHeaderHolder(classThis));
-            map.put(id, node);
-
-            if ("ROOT".equals(pid)) {
-                root.addChild(node);
-            }
-
-            if (needPreSelectFlag && id.equals(pre_id)) {
-                needPreSelectFlag = false;
-                selectedNode = node;
-                selectedNode.setSelected(true);
-                View arrow_layout = selectedNode.getViewHolder().getView().findViewById(R.id.arrow_layout);
-                PrintView iconView = (PrintView) arrow_layout.findViewById(R.id.icon);
-                iconView.setIconText(getResources().getString(R.string.ic_check_circle));
-                iconView.setIconColor(R.color.text_color_orange_1);
-                arrow_layout.setBackgroundResource(R.drawable.border_yellow);
-            }
-        }
-
-        for (int i = 0, len = array.size(); i < len; i++) {
-            JSONObject o = array.getJSONObject(i);
-            String id = o.getString("id");
-            String pid = o.getString("p");
 
             TreeNode node = map.get(id);
             TreeNode pNode = map.get(pid);

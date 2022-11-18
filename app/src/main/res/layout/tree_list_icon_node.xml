@@ -14,7 +14,7 @@
         android:layout_alignParentLeft="true"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        app:iconColor="#12558C"
+        app:iconColor="@color/tree_text_color"
         app:iconFont="font/material-icon-font.ttf"
         app:iconSize="20dp"
         app:iconText="@string/ic_keyboard_arrow_right" />
@@ -27,7 +27,7 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:layout_toRightOf="@id/arrow_icon"
-        app:iconColor="#12558C"
+        app:iconColor="@color/tree_text_color"
         app:iconFont="font/material-icon-font.ttf"
         app:iconSize="24dp"
         app:iconText="@string/ic_folder" />
