@@ -234,6 +234,13 @@ public class SgResListActivity extends DbActivity {
                 titleBarSearchLayout.startAnimation(animation);
             }
         });
+        if (titleBarSearchLayout.getVisibility() == View.VISIBLE) {
+            searchBarBtn.setTag(true);
+            searchBarBtn.setImageResource(R.drawable.titlebar_btn_search_up);
+        } else {
+            searchBarBtn.setTag(false);
+            searchBarBtn.setImageResource(R.drawable.titlebar_btn_search_down);
+        }
         homeBtn.setOnClickListener(new OnClickListener() {
 
             @Override

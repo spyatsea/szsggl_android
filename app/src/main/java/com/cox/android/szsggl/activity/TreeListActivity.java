@@ -6,7 +6,6 @@ package com.cox.android.szsggl.activity;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.View;
@@ -18,11 +17,8 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.alibaba.fastjson.JSONArray;
-import com.alibaba.fastjson.JSONObject;
 import com.cox.android.szsggl.R;
 import com.cox.android.szsggl.holder.ArrowExpandSelectableHeaderHolder;
-import com.cox.android.szsggl.holder.IconTreeItemHolder;
 import com.cox.utils.CommonParam;
 import com.cox.utils.CommonUtil;
 import com.cox.utils.StatusBarUtil;
@@ -186,8 +182,12 @@ public class TreeListActivity extends DbActivity {
                     View arrow_layout = selectedNode.getViewHolder().getView().findViewById(R.id.arrow_layout);
                     PrintView iconView = (PrintView) arrow_layout.findViewById(R.id.icon);
                     arrow_layout.setBackgroundResource(R.drawable.color_grey_selector);
-                    iconView.setIconText(getResources().getString(((IconTreeItemHolder.IconTreeItem) selectedNode.getValue()).icon));
-                    // iconView.setIconColor(getResources().getColor(R.color.background_yellow));
+                    if (selectedNode.isLeaf()) {
+                        iconView.setIconText(getResources().getString(((ArrowExpandSelectableHeaderHolder.IconTreeItem) selectedNode.getValue()).icon_leaf));
+                    } else {
+                        iconView.setIconText(getResources().getString(((ArrowExpandSelectableHeaderHolder.IconTreeItem) selectedNode.getValue()).icon));
+                    }
+                    iconView.setIconColor(getResources().getColor(R.color.background_yellow));
                     selectedNode = null;
                 }
             }
@@ -321,9 +321,9 @@ public class TreeListActivity extends DbActivity {
             processNode(root, list);
             list = null;
             // 生成测试节点。开始============================
-            // TreeNode s1 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_folder, "Folder with very long name ")).setViewHolder(
+            // TreeNode s1 = new TreeNode(new ArrowExpandSelectableHeaderHolder.IconTreeItem(R.string.ic_folder, "Folder with very long name ")).setViewHolder(
             //         new ArrowExpandSelectableHeaderHolder(classThis));
-            // TreeNode s2 = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_folder, "Another folder with very long name")).setViewHolder(
+            // TreeNode s2 = new TreeNode(new ArrowExpandSelectableHeaderHolder.IconTreeItem(R.string.ic_folder, "Another folder with very long name")).setViewHolder(
             //         new ArrowExpandSelectableHeaderHolder(classThis));
 //
             // fillFolder(s1);
@@ -374,11 +374,20 @@ public class TreeListActivity extends DbActivity {
                 // 展开已选择的节点
                 if (selectedNode != null) {
                     TreeNode pNode = selectedNode;
+                    // 逐级展开到已选节点
                     while (!pNode.isRoot()) {
-                        // Log.d("##p", "" + ((IconTreeItemHolder.IconTreeItem) pNode.getValue()).id);
+                        // Log.d("##p", "" + ((ArrowExpandSelectableHeaderHolder.IconTreeItem) pNode.getValue()).id);
                         pNode = pNode.getParent();
                         treeView.expandNode(pNode);
                     }
+                    selectedNode.setSelected(true);
+                    View arrow_layout = selectedNode.getViewHolder().getView().findViewById(R.id.arrow_layout);
+                    PrintView iconView = (PrintView) arrow_layout.findViewById(R.id.icon);
+                    iconView.setIconText(getResources().getString(R.string.ic_check_circle));
+                    iconView.setIconColor(getResources().getColor(R.color.text_color_orange_1));
+                    arrow_layout.setBackgroundResource(R.drawable.border_yellow);
+
+                    // 滚动到已选节点位置
                     tree_items.postDelayed(new Runnable() {
                         @Override
                         public void run() {
@@ -419,7 +428,7 @@ public class TreeListActivity extends DbActivity {
     private void fillFolder(TreeNode folder) {
         TreeNode currentNode = folder;
         for (int i = 0; i < 10; i++) {
-            TreeNode file = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_folder, TEST_NODE_NAME + " " + i));
+            TreeNode file = new TreeNode(new ArrowExpandSelectableHeaderHolder.IconTreeItem(R.string.ic_folder, TEST_NODE_NAME + " " + i));
             currentNode.addChild(file);
             currentNode = file;
         }
@@ -447,7 +456,7 @@ public class TreeListActivity extends DbActivity {
             String id = (String) o.get("id");
             String pid = (String) o.get("p");
             String title = (String) o.get("t");
-            TreeNode node = new TreeNode(new IconTreeItemHolder.IconTreeItem(R.string.ic_folder, R.string.ic_doc, title, id)).setViewHolder(new ArrowExpandSelectableHeaderHolder(classThis));
+            TreeNode node = new TreeNode(new ArrowExpandSelectableHeaderHolder.IconTreeItem(R.string.ic_folder, R.string.ic_doc, title, id)).setViewHolder(new ArrowExpandSelectableHeaderHolder(classThis));
             map.put(id, node);
 
             if ("ROOT".equals(pid)) {
@@ -457,12 +466,6 @@ public class TreeListActivity extends DbActivity {
             if (needPreSelectFlag && id.equals(pre_id)) {
                 needPreSelectFlag = false;
                 selectedNode = node;
-                selectedNode.setSelected(true);
-                View arrow_layout = selectedNode.getViewHolder().getView().findViewById(R.id.arrow_layout);
-                PrintView iconView = (PrintView) arrow_layout.findViewById(R.id.icon);
-                iconView.setIconText(getResources().getString(R.string.ic_check_circle));
-                iconView.setIconColor(getResources().getColor(R.color.text_color_orange_1));
-                arrow_layout.setBackgroundResource(R.drawable.border_yellow);
             }
         }
 
@@ -502,7 +505,7 @@ public class TreeListActivity extends DbActivity {
             // 创建信息传输Bundle
             Bundle data = new Bundle();
             if (selectedNode != null) {
-                IconTreeItemHolder.IconTreeItem value = (IconTreeItemHolder.IconTreeItem) selectedNode.getValue();
+                ArrowExpandSelectableHeaderHolder.IconTreeItem value = (ArrowExpandSelectableHeaderHolder.IconTreeItem) selectedNode.getValue();
                 HashMap<String, Object> data_map = new HashMap<String, Object>();
                 data_map.put("id", value.id);
                 data_map.put("text", value.text);

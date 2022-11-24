@@ -10,7 +10,10 @@ import com.github.johnkil.print.PrintView;
 import com.unnamed.b.atv.model.TreeNode;
 
 /**
- * Created by Bogdan Melnychuk on 2/12/15.
+ * AndroidTreeView自定义Holder
+ * <p>普通节点</p>
+ *
+ * @author 乔勇(Jacky Qiao)
  */
 public class IconTreeItemHolder extends TreeNode.BaseNodeViewHolder<IconTreeItemHolder.IconTreeItem> {
     private TextView tvValue;

@@ -13,9 +13,12 @@ import com.github.johnkil.print.PrintView;
 import com.unnamed.b.atv.model.TreeNode;
 
 /**
- * Created by Bogdan Melnychuk on 2/15/15, modified by Szigeti Peter 2/2/16.
+ * AndroidTreeView自定义Holder
+ * <p>节点有单选框</p>
+ *
+ * @author 乔勇(Jacky Qiao)
  */
-public class ArrowExpandSelectableHeaderHolder extends TreeNode.BaseNodeViewHolder<IconTreeItemHolder.IconTreeItem> {
+public class ArrowExpandSelectableHeaderHolder extends TreeNode.BaseNodeViewHolder<ArrowExpandSelectableHeaderHolder.IconTreeItem> {
     private TextView tvValue;
     private PrintView arrowView;
     private CheckBox nodeSelector;
@@ -27,7 +30,7 @@ public class ArrowExpandSelectableHeaderHolder extends TreeNode.BaseNodeViewHold
     }
 
     @Override
-    public View createNodeView(final TreeNode node, IconTreeItemHolder.IconTreeItem value) {
+    public View createNodeView(final TreeNode node, ArrowExpandSelectableHeaderHolder.IconTreeItem value) {
         final LayoutInflater inflater = LayoutInflater.from(context);
         final View view = inflater.inflate(R.layout.tree_list_selectable_header, null, false);
         view.setOnClickListener(new View.OnClickListener() {
@@ -135,5 +138,31 @@ public class ArrowExpandSelectableHeaderHolder extends TreeNode.BaseNodeViewHold
     public void toggleSelectionMode(boolean editModeEnabled) {
         nodeSelector.setVisibility(editModeEnabled ? View.VISIBLE : View.GONE);
         nodeSelector.setChecked(mNode.isSelected());
+    }
+
+    public static class IconTreeItem {
+        public int icon;
+        public int icon_leaf;
+        public String text;
+        public String id;
+
+        public IconTreeItem(int icon, String text) {
+            this.icon = icon;
+            this.text = text;
+            this.id = text;
+        }
+
+        public IconTreeItem(int icon, String text, String id) {
+            this.icon = icon;
+            this.text = text;
+            this.id = id;
+        }
+
+        public IconTreeItem(int icon, int icon_leaf, String text, String id) {
+            this.icon = icon;
+            this.icon_leaf = icon_leaf;
+            this.text = text;
+            this.id = id;
+        }
     }
 }
