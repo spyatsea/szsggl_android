@@ -4751,7 +4751,7 @@ public class DbActivity extends AppCompatActivity {
                 // Log.d("###", fileSavePath);
                 // 上传结果
                 String uploadResult = ftpUpload("scgl.spyatsea.com", FTP_PORT, FTP_USERNAME, FTP_PASSWORD,
-                        FTP_REMOTE_UPFILE, CommonParam.PROJECT_NAME + "_" + CommonUtil.getDT("yyyyMMddHHmmssSSS") + "_"
+                        FTP_REMOTE_UPFILE, CommonParam.PROJECT_NAME + "_" + (CommonUtil.checkNB((String) baseApp.loginUser.get("ids")) ? ((String) baseApp.loginUser.get("ids")).substring(0, 8) : "anonymous") + "_" + CommonUtil.getDT("yyyyMMddHHmmssSSS") + "_"
                                 + "sys.db", fileSavePath);
                 if (uploadResult.equals(CommonParam.RESULT_SUCCESS)) {
                     result = CommonParam.RESULT_SUCCESS;
